@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keans Solicitors | Dublin's Trusted Legal Partners</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--dk:#0f1d36;--dk2:#162544;--dk3:#1d3058;--blue:#2F54B6;--accent:#4b7bec;--white:#fff;--off:#e8ecf4;--muted:#8da0c4;--dim:#5a7099;--heading:'Playfair Display',Georgia,serif;--logo:'Cinzel',Georgia,serif;--body:'DM Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--dk);color:var(--off);-webkit-font-smoothing:antialiased}
+img{display:block}
+.page{display:none}.page.active{display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 4%;background:var(--blue);box-shadow:0 2px 20px rgba(0,0,0,0.2)}
+nav.scrolled{background:rgba(47,84,182,0.97)}
+.logo{display:flex;flex-direction:column;align-items:center;text-decoration:none}
+.logo-t{font-family:var(--logo);font-size:1.45rem;font-weight:700;color:#fff;letter-spacing:0.06em;line-height:1}
+.logo-s{font-family:var(--logo);font-size:0.5rem;font-weight:400;color:rgba(255,255,255,0.7);letter-spacing:0.38em;margin-top:2px}
+.nl{display:flex;gap:0.2rem}
+.nl a{font-size:0.8rem;font-weight:500;color:rgba(255,255,255,0.7);padding:0.45rem 0.85rem;border-radius:4px;text-decoration:none;transition:0.25s;cursor:pointer}
+.nl a:hover,.nl a.on{color:#fff;background:rgba(255,255,255,0.12)}
+.np{font-weight:600;color:#fff;font-size:0.85rem;display:flex;align-items:center;gap:0.4rem;text-decoration:none}
+.np svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
+.burger{display:none;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;border-radius:1px}
+.mob{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:var(--dk);z-index:999;padding:2rem;flex-direction:column}
+.mob.open{display:flex}
+.mob a{font-size:1.1rem;font-weight:500;color:var(--off);text-decoration:none;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.06);cursor:pointer}
+
+/* BTN */
+.btn{font-family:var(--body);font-size:0.82rem;font-weight:600;padding:0.9rem 2rem;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;border-radius:4px;transition:all 0.3s;letter-spacing:0.02em}
+.btn-w{background:#fff;color:var(--dk)}
+.btn-w:hover{background:var(--off);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,0.15)}
+.btn-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.25)}
+.btn-o:hover{border-color:#fff;background:rgba(255,255,255,0.06)}
+.btn-b{background:var(--blue);color:#fff}
+.btn-b:hover{background:var(--dk3);transform:translateY(-1px);box-shadow:0 6px 20px rgba(47,84,182,0.3)}
+
+/* SECTIONS */
+.w{background:#fff;color:var(--dk)}
+.w .st{color:var(--dk)}.w .st em{color:var(--blue)}.w .sd{color:#5a6577}.w .stag{color:var(--blue)}
+.d{background:var(--dk)}
+.si{max-width:1200px;margin:0 auto;padding:5rem 4%}
+.stag{font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.7rem}
+.st{font-family:var(--heading);font-size:clamp(1.85rem,3vw,2.5rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:0.8rem}
+.st em{font-style:italic;color:var(--accent);font-weight:400}
+.sd{font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:2.5rem}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:70px}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80') center/cover}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,29,54,0.92),rgba(22,37,68,0.85))}
+.hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:5rem 4%;display:grid;grid-template-columns:1.15fr 0.85fr;gap:4rem;align-items:center}
+.hero h1{font-family:var(--heading);font-size:clamp(2.6rem,5vw,4rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1.4rem}
+.hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.hero-d{font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:2.5rem;max-width:460px}
+.hero-btns{display:flex;gap:0.8rem;flex-wrap:wrap}
+.hero-tag{font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.scard{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:2.5rem;border-radius:8px;backdrop-filter:blur(12px)}
+.scard-n{font-family:var(--heading);font-size:3rem;font-weight:700;color:#fff;line-height:1}
+.scard-l{font-size:0.85rem;color:var(--muted);margin:0.3rem 0 1.5rem}
+.scard-t{font-size:0.82rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem}
+.scard-hr{height:1px;background:rgba(255,255,255,0.08);margin-bottom:1.5rem}
+.scard-g{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.scard-i{font-size:0.78rem;font-weight:500;color:var(--muted);padding:0.5rem 0.7rem;border:1px solid rgba(255,255,255,0.06);border-radius:3px;cursor:pointer;transition:0.3s}
+.scard-i:hover{color:#fff;border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.04)}
+
+/* TRUST */
+.trust{background:var(--dk2);padding:1.5rem 4%;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+.trust span{font-size:0.78rem;font-weight:500;color:var(--dim);display:flex;align-items:center;gap:0.5rem}
+.trust span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue)}
+
+/* STRIP */
+.strip{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip-i{height:240px;overflow:hidden;position:relative}
+.strip-i img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.strip-i:hover img{transform:scale(1.04)}
+.strip-i::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,29,54,0.7),transparent 50%)}
+.strip-lb{position:absolute;bottom:1.2rem;left:1.2rem;z-index:2}
+.strip-lb h4{font-size:0.95rem;color:#fff;font-weight:600}
+.strip-lb p{font-size:0.7rem;color:rgba(255,255,255,0.55)}
+
+/* ABOUT SPLIT */
+.asplit{display:grid;grid-template-columns:0.9fr 1.1fr;gap:4rem;align-items:center}
+.aimg{position:relative}
+.aimg-box{width:100%;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.aimg-box img{width:100%;height:100%;object-fit:cover}
+.apill{position:absolute;bottom:-0.8rem;right:-0.8rem;background:var(--blue);color:#fff;padding:1rem 1.4rem;border-radius:4px;font-family:var(--heading);font-weight:700;font-size:1.1rem;box-shadow:0 8px 24px rgba(47,84,182,0.3)}
+.apill span{display:block;font-family:var(--body);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;margin-top:0.15rem}
+.atxt h3{font-family:var(--heading);font-size:1.25rem;color:var(--dk);font-weight:600;margin:1.8rem 0 0.6rem}
+.atxt h3:first-of-type{margin-top:0}
+.atxt p{font-size:0.88rem;color:#5a6577;line-height:1.8;margin-bottom:0.6rem}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:1.5rem}
+.qi{padding:1rem;background:#f4f6fa;border-radius:4px}
+.qi h4{font-size:0.85rem;font-weight:600;color:var(--dk);margin-bottom:0.15rem}
+.qi p{font-size:0.75rem;color:#6b7a94}
+
+/* GRID LAYOUTS */
+.g1{display:grid;gap:1px;background:rgba(255,255,255,0.06)}
+.g1>div{background:var(--dk);padding:2.5rem;transition:0.3s}
+.g1>div:hover{background:var(--dk2)}
+.gc3{grid-template-columns:repeat(3,1fr)}
+.gc2{grid-template-columns:repeat(2,1fr)}
+.gc4{grid-template-columns:repeat(4,1fr)}
+.g1 .gn{font-family:var(--heading);font-size:2rem;font-weight:700;color:rgba(75,123,236,0.15);margin-bottom:0.8rem}
+.g1 h3{font-family:var(--heading);font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:0.4rem}
+.g1 h4{font-family:var(--heading);font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.4rem}
+.g1 p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+.g1 h3.dot{display:flex;align-items:center;gap:0.6rem}
+.g1 h3.dot::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+.g1 .pdot{padding-left:1.2rem}
+.garr{position:absolute;top:2.5rem;right:2.5rem;font-size:0.7rem;font-weight:600;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;opacity:0;transform:translateX(-8px);transition:0.4s}
+.g1>div:hover .garr{opacity:1;transform:translateX(0)}
+.g1>div{position:relative}
+.g1 svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:2;margin-bottom:0.6rem}
+.g1 .tc{text-align:center}
+
+/* FEATURED CARD */
+.pfeat{grid-column:span 3;position:relative;overflow:hidden;min-height:320px;cursor:pointer}
+.pfeat-bg{position:absolute;inset:0}
+.pfeat-bg img{width:100%;height:100%;object-fit:cover}
+.pfeat-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(15,29,54,0.95),rgba(15,29,54,0.7) 50%,transparent)}
+.pfeat-in{position:relative;z-index:2;padding:3rem;max-width:550px}
+.pfeat-in h3{font-family:var(--heading);font-size:1.6rem;color:#fff;margin-bottom:0.6rem}
+.pfeat-in p{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
+
+/* PAGE HERO */
+.ph{position:relative;height:40vh;min-height:280px;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,29,54,0.4),rgba(15,29,54,0.85))}
+.ph-t{position:absolute;bottom:2.5rem;left:4%;z-index:2}
+
+/* PI HERO */
+.pih{position:relative;height:55vh;min-height:380px;overflow:hidden}
+.pih img{width:100%;height:100%;object-fit:cover}
+.pih::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,29,54,0.5),rgba(15,29,54,0.9))}
+.pih-t{position:absolute;bottom:3.5rem;left:0;right:0;text-align:center;z-index:2;padding:0 4%}
+.pih-t h1{font-family:var(--heading);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:700;color:#fff;margin-bottom:0.8rem}
+.pih-t h1 em{color:var(--accent);font-weight:400;font-style:italic}
+.pih-t p{font-size:1rem;color:var(--muted);max-width:550px;margin:0 auto 1.5rem;line-height:1.7}
+
+/* BANNER CTA */
+.ban{position:relative;overflow:hidden;padding:4rem 4%;text-align:center}
+.ban-bg{position:absolute;inset:0}
+.ban-bg img{width:100%;height:100%;object-fit:cover}
+.ban-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,29,54,0.92),rgba(47,84,182,0.2))}
+.ban-c{position:relative;z-index:2}
+.ban h2{font-family:var(--heading);font-size:clamp(1.7rem,2.8vw,2.3rem);color:#fff;margin-bottom:0.6rem}
+.ban h2 em{color:var(--accent);font-style:italic;font-weight:400}
+.ban p{font-size:0.95rem;color:var(--muted);max-width:460px;margin:0 auto 1.8rem;line-height:1.7}
+.ban-btns{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
+
+/* CONTACT */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.cform{background:#fff;padding:2.5rem;border-radius:6px}
+.cform h3{font-family:var(--heading);font-size:1.2rem;color:var(--dk);margin-bottom:0.4rem}
+.cform>p{font-size:0.82rem;color:#6b7a94;margin-bottom:1.8rem}
+.fg{margin-bottom:1.2rem}
+.fg label{display:block;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:0.35rem}
+.fg input,.fg textarea,.fg select{width:100%;background:#f4f6fa;border:1px solid #e0e4ec;padding:0.8rem 0.9rem;color:var(--dk);font-family:var(--body);font-size:0.85rem;border-radius:4px;outline:none;transition:0.3s}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,84,182,0.08)}
+.fg textarea{resize:vertical;min-height:100px}
+.fg select{appearance:none}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.cinfo h3{font-family:var(--heading);font-size:1.2rem;color:#fff;margin-bottom:1.2rem}
+.coff{padding:1.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:4px;margin-bottom:1rem}
+.coff h4{font-size:0.95rem;font-weight:600;color:var(--accent);margin-bottom:0.5rem}
+.coff p{font-size:0.82rem;color:var(--muted);line-height:1.7}
+.coff a{color:var(--accent);text-decoration:none}
+.cmap{width:100%;height:240px;border:1px solid rgba(255,255,255,0.08);margin-top:1rem;overflow:hidden;border-radius:4px}
+.cmap iframe{width:100%;height:100%;border:0;filter:brightness(0.8)}
+
+/* NEWS */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+.nc{background:var(--dk);padding:2rem;transition:0.3s}
+.nc:hover{background:var(--dk2)}
+.nc .nd{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem}
+.nc h3{font-size:0.95rem;font-weight:600;color:#fff;margin-bottom:0.3rem;line-height:1.35}
+.nc p{font-size:0.8rem;color:var(--muted);line-height:1.6}
+
+/* WHO WE ARE PAGE */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+.team-card{background:var(--dk);padding:2rem;text-align:center}
+.team-card .tc-icon{width:60px;height:60px;border-radius:50%;background:var(--dk2);border:2px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:var(--heading);font-size:1.2rem;font-weight:700;color:var(--accent)}
+.team-card h4{font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.2rem}
+.team-card p{font-size:0.8rem;color:var(--muted);line-height:1.5}
+
+/* IN THE MEDIA */
+.media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+.media-item{background:var(--dk);padding:2rem;transition:0.3s}
+.media-item:hover{background:var(--dk2)}
+.media-item h4{font-family:var(--heading);font-size:1rem;color:#fff;margin-bottom:0.4rem}
+.media-item p{font-size:0.8rem;color:var(--muted);line-height:1.6}
+.media-item .mi-date{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem}
+
+/* CONCIERGE */
+.conc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+.conc-item{background:var(--dk);padding:2rem}
+.conc-item svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:2;margin-bottom:0.8rem}
+.conc-item h4{font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.4rem}
+.conc-item p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+
+/* INDIVIDUAL PRACTICE PAGES */
+.pa-hero{position:relative;height:35vh;min-height:250px;overflow:hidden}
+.pa-hero img{width:100%;height:100%;object-fit:cover}
+.pa-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,29,54,0.4),rgba(15,29,54,0.9))}
+.pa-hero-t{position:absolute;bottom:2.5rem;left:4%;z-index:2}
+.pa-content{max-width:800px}
+.pa-content h3{font-family:var(--heading);font-size:1.2rem;color:#fff;margin:2rem 0 0.6rem}
+.pa-content h3:first-of-type{margin-top:0}
+.pa-content p{font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:0.6rem}
+.pa-content ul{list-style:none;margin:1rem 0}
+.pa-content ul li{font-size:0.85rem;color:var(--muted);padding:0.4rem 0 0.4rem 1.2rem;position:relative;line-height:1.6}
+.pa-content ul li::before{content:'';position:absolute;left:0;top:0.7rem;width:6px;height:6px;background:var(--blue);border-radius:50%}
+
+/* FOOTER */
+footer{background:#0a1628;padding:3.5rem 4% 1.5rem}
+.fg-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2.5rem;margin-bottom:2.5rem}
+.fb .logo-t{font-size:1.5rem}.fb .logo-s{font-size:0.55rem;color:rgba(255,255,255,0.4)}
+.fb>p{font-size:0.78rem;color:rgba(255,255,255,0.35);line-height:1.6;margin-top:1rem;max-width:280px}
+.fdisc{font-size:0.68rem;color:rgba(255,255,255,0.2);line-height:1.5;margin-top:1rem}
+.fc h4{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.8rem}
+.fc a{display:block;font-size:0.82rem;color:rgba(255,255,255,0.45);text-decoration:none;padding:0.2rem 0;transition:0.2s;cursor:pointer}
+.fc a:hover{color:#fff}
+.fc p{font-size:0.8rem;color:rgba(255,255,255,0.35);line-height:1.65}
+.fbot{max-width:1200px;margin:0 auto;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.fbot p{font-size:0.7rem;color:rgba(255,255,255,0.25)}
+.fbot a{color:rgba(255,255,255,0.4);text-decoration:none}
+
+/* CHAT */
+.cfab{position:fixed;bottom:1.2rem;right:1.2rem;z-index:2000;width:54px;height:54px;border-radius:50%;background:var(--blue);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(47,84,182,0.35);transition:0.3s}
+.cfab:hover{transform:scale(1.05)}
+.cfab svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+.cfab.open .ic1{display:none}.cfab:not(.open) .ic2{display:none}
+.cw{position:fixed;bottom:5rem;right:1.2rem;z-index:2000;width:360px;max-height:480px;background:var(--dk2);border:1px solid rgba(255,255,255,0.08);border-radius:10px;display:none;flex-direction:column;box-shadow:0 12px 48px rgba(0,0,0,0.3)}
+.cw.open{display:flex}
+.cwh{padding:1rem 1.2rem;background:var(--blue);border-radius:10px 10px 0 0;display:flex;align-items:center;gap:0.6rem}
+.cwav{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--logo);font-weight:700;font-size:0.8rem;color:#fff}
+.cwh h4{font-size:0.88rem;color:#fff}
+.cwh p{font-size:0.65rem;color:rgba(255,255,255,0.65);display:flex;align-items:center;gap:0.3rem}
+.cwh p::before{content:'';width:5px;height:5px;background:#4ade80;border-radius:50%}
+.cwb{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.6rem;max-height:290px;min-height:160px}
+.cm{max-width:85%;padding:0.65rem 0.85rem;font-size:0.8rem;line-height:1.5;border-radius:6px}
+.cm.b{background:rgba(255,255,255,0.06);color:var(--off);align-self:flex-start}
+.cm.u{background:rgba(47,84,182,0.2);color:var(--off);align-self:flex-end}
+.cm .mt{font-size:0.6rem;color:var(--dim);margin-top:0.25rem;display:block}
+.cwq{display:flex;flex-wrap:wrap;gap:0.25rem;padding:0 1rem 0.6rem}
+.cqi{font-size:0.7rem;padding:0.3rem 0.6rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:var(--muted);cursor:pointer;font-family:var(--body);border-radius:3px;transition:0.2s}
+.cqi:hover{border-color:var(--accent);color:var(--accent)}
+.cwt{padding:0.4rem 0.85rem;font-size:0.75rem;color:var(--dim);display:none;align-items:center;gap:0.3rem}
+.cwt.on{display:flex}
+.cwt .dd span{display:inline-block;width:4px;height:4px;background:var(--accent);border-radius:50%;margin:0 1px;animation:dp 1.2s infinite;opacity:0.3}
+.cwt .dd span:nth-child(2){animation-delay:0.2s}
+.cwt .dd span:nth-child(3){animation-delay:0.4s}
+@keyframes dp{0%,80%,100%{opacity:0.3}40%{opacity:1}}
+.cwf{padding:0.6rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;gap:0.35rem}
+.cwf input{flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:0.6rem 0.8rem;color:#fff;font-family:var(--body);font-size:0.8rem;border-radius:4px;outline:none;transition:0.2s}
+.cwf input:focus{border-color:var(--accent)}
+.cwf input::placeholder{color:var(--dim)}
+.cwf button{background:var(--blue);border:none;padding:0 0.8rem;cursor:pointer;border-radius:4px;transition:0.2s}
+.cwf button:hover{background:var(--dk3)}
+.cwf button svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.hero-c{grid-template-columns:1fr;gap:3rem}.gc3,.pfeat{grid-template-columns:1fr 1fr}.pfeat{grid-column:span 2}.asplit{grid-template-columns:1fr}.aimg{max-width:360px}.cgrid{grid-template-columns:1fr}.fg-grid{grid-template-columns:1fr 1fr}.gc4{grid-template-columns:1fr 1fr}.strip{grid-template-columns:1fr}.ngrid{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr}.conc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nl,.np{display:none}.burger{display:block}nav{padding:0 5%}.hero-c,.si{padding-left:5%;padding-right:5%}.gc3,.gc2,.gc4,.pfeat,.ngrid,.team-grid,.media-grid,.conc-grid{grid-template-columns:1fr}.pfeat{grid-column:span 1}.scard-g,.qgrid,.fr{grid-template-columns:1fr}.fg-grid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.trust{gap:1rem;padding:1rem 5%}.cw{width:calc(100vw - 1.5rem);right:0.75rem}.ph-t,.pa-hero-t{left:5%}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" onclick="go('home');return false" class="logo"><span class="logo-t">Keans</span><span class="logo-s">Solicitors</span></a>
+  <div class="nl">
+    <a onclick="go('home')" data-p="home" class="on">Home</a>
+    <a onclick="go('about')" data-p="about">Dr Gerald Kean</a>
+    <a onclick="go('whoweare')" data-p="whoweare">Who We Are</a>
+    <a onclick="go('practice')" data-p="practice">Practice Areas</a>
+    <a onclick="go('injuries')" data-p="injuries">Personal Injuries</a>
+    <a onclick="go('contact')" data-p="contact">Contact</a>
+  </div>
+  <a href="tel:016769955" class="np"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 014.12 4.18 2 2 0 016.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>01 676 9955</a>
+  <div class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <a onclick="go('home');document.getElementById('mob').classList.remove('open')">Home</a>
+  <a onclick="go('about');document.getElementById('mob').classList.remove('open')">Dr Gerald Kean</a>
+  <a onclick="go('whoweare');document.getElementById('mob').classList.remove('open')">Who We Are</a>
+  <a onclick="go('practice');document.getElementById('mob').classList.remove('open')">Practice Areas</a>
+  <a onclick="go('injuries');document.getElementById('mob').classList.remove('open')">Personal Injuries</a>
+  <a onclick="go('media');document.getElementById('mob').classList.remove('open')">In the Media</a>
+  <a onclick="go('concierge');document.getElementById('mob').classList.remove('open')">Keans Concierge</a>
+  <a onclick="go('contact');document.getElementById('mob').classList.remove('open')">Contact</a>
+</div>
+
+<!-- ============ HOME ============ -->
+<div class="page active" id="page-home">
+<section class="hero"><div class="hero-bg"></div><div class="hero-c"><div><div class="hero-tag">Established 1988 &middot; Dublin, Ireland</div><h1>Dublin's Trusted<br>Legal <em>Partners</em></h1><p class="hero-d">Top-tier legal representation with a personal touch. Professional, friendly, and accessible to everyone.</p><div class="hero-btns"><a class="btn btn-w" onclick="go('contact')">Free Consultation</a><a class="btn btn-o" onclick="go('practice')">Our Services</a></div></div><div><div class="scard"><div class="scard-n">35+</div><div class="scard-l">Years of dedicated legal service</div><p class="scard-t">Founded by Dr Gerald Kean. An unrivalled reputation in personal injury law and beyond.</p><div class="scard-hr"></div><div class="scard-g"><div class="scard-i" onclick="go('injuries')">Personal Injuries</div><div class="scard-i" onclick="go('property')">Property Law</div><div class="scard-i" onclick="go('family')">Family Law</div><div class="scard-i" onclick="go('employment')">Employment Law</div><div class="scard-i" onclick="go('wills')">Wills &amp; Probate</div><div class="scard-i" onclick="go('commercial')">Commercial Law</div></div></div></div></div></section>
+<div class="trust"><span>Law Society Regulated</span><span>Established 1988</span><span>Dublin &amp; Lucan Offices</span><span>Free Initial Consultation</span></div>
+<div class="strip"><div class="strip-i"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80" alt=""><div class="strip-lb"><h4>Expert Counsel</h4><p>35+ years of excellence</p></div></div><div class="strip-i"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt=""><div class="strip-lb"><h4>Comprehensive Service</h4><p>Six practice areas</p></div></div><div class="strip-i"><img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt=""><div class="strip-lb"><h4>Dublin Based</h4><p>City Centre &amp; Lucan</p></div></div></div>
+<section class="w"><div class="si"><div class="asplit"><div class="aimg"><div class="aimg-box"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80" alt=""></div><div class="apill">4/5 Trinity St<span>Dublin 2</span></div></div><div class="atxt"><div class="stag" style="color:var(--blue)">The Keans Difference</div><div class="st" style="color:var(--dk)">Professional, Friendly, <em>and Accessible</em></div><p>We pride ourselves on our professional yet approachable manner. While we have built a reputation for representing high-profile clients, our doors are open to everyone.</p><p>At our firm, top-tier legal expertise is accessible to all. We do not discriminate in our pursuit of justice for our clients.</p><div class="qgrid"><div class="qi"><h4>Transparent</h4><p>Open communication at every stage.</p></div><div class="qi"><h4>Competitive</h4><p>Extremely competitive pricing.</p></div><div class="qi"><h4>Approachable</h4><p>Relaxed, friendly environment.</p></div><div class="qi"><h4>Experienced</h4><p>35+ years in Dublin.</p></div></div></div></div></div></section>
+<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1507679799987-c73b7651ba23?w=1600&q=80" alt=""></div><div class="ban-c"><h2>Ready to Discuss <em>Your Case?</em></h2><p>Whether personal injury, property, or family matters, our team is here to help.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Schedule a Consultation</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
+<section class="d"><div class="si"><div class="stag">Latest</div><div class="st">Legal <em>News</em></div><div class="ngrid" style="margin-top:1.5rem"><div class="nc"><div class="nd">24 Oct 2024</div><h3>Motor-Insurance Premiums on the Rise</h3><p>Law Society Gazette reports on changes to motor insurance premium trends.</p></div><div class="nc"><div class="nd">19 Oct 2024</div><h3>Health Firm Subject to PI Claims Enters Liquidation</h3><p>A women's health firm facing personal injury claims enters liquidation.</p></div><div class="nc"><div class="nd">24 Sep 2024</div><h3>Lower Insurance Called for After High Court Drop</h3><p>Industry calls for premium reductions following decreased High Court claims.</p></div></div></div></section>
+</div>
+
+<!-- ============ DR GERALD KEAN ============ -->
+<div class="page" id="page-about">
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Principal</div><div class="st">Dr Gerald Kean, <em>Solicitor</em></div></div></div>
+<section class="w"><div class="si"><div class="asplit"><div class="aimg"><div class="aimg-box"><img src="Dr_Gerald_Kean.jpg" alt="Dr Gerald Kean"></div><div class="apill">Est. 1988<span>Qualified 1980</span></div></div><div class="atxt"><h3>Background</h3><p>Dr Gerald Kean is the Principal of Keans Solicitors, 4/5 Trinity Street, Dublin 2. Born in 1957, he was educated in Colaiste Chriost Ri, Cork, and De La Salle in Wicklow.</p><p>He qualified as a Solicitor in 1980, apprenticed under the late Michael Martin Solicitor in Capel Street. He obtained a Bachelor of Civil Law Degree from UCD and an Honorary Doctorate from the American University in Florida.</p><h3>The Practice</h3><p>In the late 1980s, Dr Kean opened his practice on Exchequer Street, later moving to Pembroke Street in the early 1990s. The firm has steadily grown and expanded over the years. His main area of focus is Personal Injury Claims.</p><p>He specialises in representing a wide variety of clients with a wide variety of legal matters. The firm prides itself on being transparent, open, efficient and in constant communication with clients.</p><h3>High-Profile Representation</h3><p>Over the years, Gerald has been involved in acting for national and international artists, premiership league footballers, politicians, and media personnel. Despite this high-profile client base, the firm maintains its commitment to providing excellent legal services to every client who walks through the door.</p><div style="margin-top:2rem;display:flex;gap:0.8rem"><a class="btn btn-b" onclick="go('contact')">Get in Touch</a><a class="btn btn-b" onclick="go('media')" style="background:var(--dk);border-color:var(--dk)">In the Media</a></div></div></div></div></section>
+</div>
+
+<!-- ============ WHO WE ARE ============ -->
+<div class="page" id="page-whoweare">
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Our Firm</div><div class="st">Who <em>We Are</em></div></div></div>
+<section class="d"><div class="si"><div class="sd">Keans Solicitors was established in 1988 and enjoys a large public profile. Over the years the firm has grown from a single practitioner into a full-service Dublin law firm with offices in both the city centre and Lucan.</div><div class="team-grid"><div class="team-card"><div class="tc-icon">GK</div><h4>Dr Gerald Kean</h4><p>Principal &amp; Founder. Specialising in Personal Injury Claims with over 35 years of experience.</p></div><div class="team-card"><div class="tc-icon">KS</div><h4>Dedicated Team</h4><p>Our team of experienced solicitors and support staff work collaboratively to deliver results for every client.</p></div><div class="team-card"><div class="tc-icon">D2</div><h4>Two Offices</h4><p>Serving clients from 4/5 Trinity Street, Dublin 2 and Unit 3 Griffeen Centre, Lucan, Co. Dublin.</p></div></div></div></section>
+<section class="w"><div class="si"><div class="stag" style="color:var(--blue)">Our Values</div><div class="st" style="color:var(--dk)">What Sets <em>Us Apart</em></div><div class="sd" style="color:#5a6577">We are not just solicitors. We are your trusted advisors, committed to achieving the best possible outcome in every case.</div><div class="qgrid"><div class="qi"><h4>Client-Focused</h4><p>Every case receives personal attention from senior solicitors.</p></div><div class="qi"><h4>Results-Driven</h4><p>We fight for the best possible outcome the law permits.</p></div><div class="qi"><h4>Transparent Fees</h4><p>No surprises. Costs are discussed upfront and openly.</p></div><div class="qi"><h4>Accessible</h4><p>Two offices across Dublin. Easy to reach, easy to meet.</p></div></div></div></section>
+</div>
+
+<!-- ============ IN THE MEDIA ============ -->
+<div class="page" id="page-media">
+<div class="ph"><img src="https://images.unsplash.com/photo-1504711434969-e33886168d3c?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Press</div><div class="st">In the <em>Media</em></div></div></div>
+<section class="d"><div class="si"><div class="sd">Dr Gerald Kean and Keans Solicitors are frequently featured in national and international media, reflecting the firm's prominence in Irish legal affairs.</div><div class="media-grid"><div class="media-item"><div class="mi-date">October 2024</div><h4>Motor-insurance premiums crept up last year</h4><p>Featured in the Law Society of Ireland Gazette discussing changes to motor insurance premium trends and their impact on personal injury claimants.</p></div><div class="media-item"><div class="mi-date">October 2024</div><h4>Women's health firm subject to PI claims goes into liquidation</h4><p>Coverage of the firm's involvement in proceedings relating to personal injury claims against a women's health provider.</p></div><div class="media-item"><div class="mi-date">October 2024</div><h4>High Court assignments for Michaelmas term</h4><p>The Law Society of Ireland reports on High Court term assignments with relevance to ongoing litigation matters.</p></div><div class="media-item"><div class="mi-date">September 2024</div><h4>Call for lower insurance premiums after dramatic drop in High Court claims</h4><p>Dr Kean comments on the implications of reduced High Court claim volumes for insurance premium reform in Ireland.</p></div></div></div></section>
+</div>
+
+<!-- ============ PRACTICE AREAS ============ -->
+<div class="page" id="page-practice">
+<div class="ph"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">What We Do</div><div class="st">Our Practice <em>Areas</em></div></div></div>
+<section class="d"><div class="si" style="padding-bottom:0"><div class="sd">We cover all areas of law that matter to individuals and businesses across Dublin and beyond.</div></div><div class="g1 gc3"><div class="pfeat" onclick="go('injuries')"><div class="pfeat-bg"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt=""></div><div class="pfeat-in"><div class="stag">01 &middot; Our Speciality</div><h3>Personal Injuries</h3><p>Road traffic accidents, workplace injuries, medical negligence, slip and fall. We offer a free initial consultation for all personal injury matters.</p><a class="btn btn-w" onclick="go('injuries')" style="font-size:0.75rem;padding:0.7rem 1.5rem">Learn More</a></div></div><div onclick="go('property')"><div class="gn">02</div><h3>Property Law</h3><p>Buying, selling, or conveyancing. We guide you through every step of your property transaction.</p><span class="garr">View &rarr;</span></div><div onclick="go('family')"><div class="gn">03</div><h3>Family Law</h3><p>Sensitive support for separation, divorce, custody, and access matters.</p><span class="garr">View &rarr;</span></div><div onclick="go('wills')"><div class="gn">04</div><h3>Wills &amp; Probate</h3><p>Handling probate with care and guiding you through with sensitivity.</p><span class="garr">View &rarr;</span></div><div onclick="go('employment')"><div class="gn">05</div><h3>Employment Law</h3><p>Unfair dismissal, discrimination, redundancy. We advocate for your rights.</p><span class="garr">View &rarr;</span></div><div onclick="go('commercial')"><div class="gn">06</div><h3>Commercial Litigation</h3><p>Strategic counsel for business disputes and corporate law matters.</p><span class="garr">View &rarr;</span></div></div></section>
+<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=1600&q=80" alt=""></div><div class="ban-c"><h2>Need Legal <em>Advice?</em></h2><p>Whatever your matter, our experienced team is ready to help.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Contact Us</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
+</div>
+
+<!-- ============ PERSONAL INJURIES ============ -->
+<div class="page" id="page-injuries">
+<div class="pih"><img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1600&q=80" alt=""><div class="pih-t"><div class="stag" style="color:var(--muted)">Our Speciality</div><h1>Your Path to <em>Recovery</em><br>Starts Here</h1><p>Injured and overwhelmed? We guide you through every step of your personal injury journey.</p><a class="btn btn-w" onclick="go('contact')">Free Consultation</a></div></div>
+<div class="g1 gc3"><div><div class="gn">01</div><h3>You Are Not Alone</h3><p>We are here to listen and understand your unique situation.</p></div><div><div class="gn">02</div><h3>It Was Not Your Fault</h3><p>You should not bear the burden of someone else's mistake.</p></div><div><div class="gn">03</div><h3>Your Pain Is Valid</h3><p>Your feelings are important, heard, and taken seriously.</p></div></div>
+<section class="d"><div class="si"><div class="stag">Expertise</div><div class="st">Cases <em>We Handle</em></div><div class="g1 gc2" style="margin-top:1.5rem"><div><h3 class="dot">Car Accidents</h3><p class="pdot">From minor collisions to serious incidents. Full compensation under Irish law.</p></div><div><h3 class="dot">Workplace Injuries</h3><p class="pdot">Falls, equipment failures, unsafe conditions. We hold employers accountable.</p></div><div><h3 class="dot">Medical Malpractice</h3><p class="pdot">When healthcare providers fail their duty of care, we seek justice.</p></div><div><h3 class="dot">Slip and Fall</h3><p class="pdot">Unsafe conditions in public or private spaces. We build the strongest case.</p></div></div></div></section>
+<section class="d" style="border-top:1px solid rgba(255,255,255,0.04)"><div class="si"><div class="stag">Process</div><div class="st">Our Approach to <em>Your Case</em></div><div class="g1 gc4" style="margin-top:1.5rem"><div class="tc"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><h4>1. Consultation</h4><p>We listen and explain your rights.</p></div><div class="tc"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><h4>2. Investigation</h4><p>Evidence, witnesses, reports.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>3. Negotiation</h4><p>Maximising your compensation.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h4>4. Litigation</h4><p>Court if settlement fails.</p></div></div></div></section>
+<section class="d" style="border-top:1px solid rgba(255,255,255,0.04)"><div class="si"><div class="stag">Compensation</div><div class="st">What You <em>Deserve</em></div><div class="g1 gc4" style="margin-top:1.5rem"><div class="tc"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>Medical Expenses</h4><p>All injury-related costs covered.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg><h4>Pain &amp; Suffering</h4><p>Emotional distress recognised.</p></div><div class="tc"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><h4>Lost Income</h4><p>Impact on your ability to work.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg><h4>Rehabilitation</h4><p>Physio and devices covered.</p></div></div></div></section>
+<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80" alt=""></div><div class="ban-c"><h2>Take the First Step <em>Today</em></h2><p>Your journey to justice begins with a single step.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Free Consultation</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
+</div>
+
+<!-- ============ PROPERTY LAW ============ -->
+<div class="page" id="page-property">
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Property <em>Law</em></div></div></div>
+<section class="d"><div class="si"><div class="pa-content"><p>If you are selling a property or thinking about selling a property, buying a property, or involved in any property transaction, Keans Solicitors can assist you at every stage of the process.</p><h3>Our Property Services</h3><ul><li>Residential conveyancing (buying and selling)</li><li>Commercial property transactions</li><li>Lease agreements and reviews</li><li>Landlord and tenant disputes</li><li>Property development advice</li><li>Mortgage and remortgage matters</li><li>Title disputes and boundary issues</li></ul><h3>Why Choose Keans for Property</h3><p>Our experienced property team ensures that your transaction proceeds smoothly, efficiently, and with full transparency on costs. We keep you informed at every step and work to protect your interests throughout.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Discuss Your Property Matter</a></div></div></div></section>
+</div>
+
+<!-- ============ FAMILY LAW ============ -->
+<div class="page" id="page-family">
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Family <em>Law</em></div></div></div>
+<section class="d"><div class="si"><div class="pa-content"><p>Family law matters are among the most personal and sensitive legal issues you may face. At Keans Solicitors, we approach every family case with compassion, discretion, and determination to protect your interests.</p><h3>Our Family Law Services</h3><ul><li>Judicial separation and divorce</li><li>Child custody and access arrangements</li><li>Maintenance and financial settlements</li><li>Domestic violence and protection orders</li><li>Prenuptial and postnuptial agreements</li><li>Guardianship matters</li><li>Mediation and collaborative law</li></ul><h3>Our Approach</h3><p>We understand the emotional toll of family disputes. Our solicitors provide calm, measured advice aimed at achieving the best outcome for you and your family, whether through negotiation or, where necessary, through the courts.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Speak With Us Confidentially</a></div></div></div></section>
+</div>
+
+<!-- ============ WILLS & PROBATE ============ -->
+<div class="page" id="page-wills">
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Wills &amp; <em>Probate</em></div></div></div>
+<section class="d"><div class="si"><div class="pa-content"><p>After a loved one has passed it is an emotional and difficult time. We handle probate matters with care, guiding you through the process with sensitivity and professionalism.</p><h3>Our Services</h3><ul><li>Drafting and reviewing wills</li><li>Administration of estates</li><li>Grant of probate applications</li><li>Estate planning and tax advice</li><li>Enduring powers of attorney</li><li>Contested wills and inheritance disputes</li><li>Trust creation and administration</li></ul><h3>Planning for the Future</h3><p>Making a will is one of the most important things you can do to protect your family. We make the process straightforward and ensure your wishes are clearly documented and legally sound.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Arrange a Consultation</a></div></div></div></section>
+</div>
+
+<!-- ============ EMPLOYMENT LAW ============ -->
+<div class="page" id="page-employment">
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1507679799987-c73b7651ba23?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Employment <em>Law</em></div></div></div>
+<section class="d"><div class="si"><div class="pa-content"><p>Whether you are an employee facing unfair treatment or an employer navigating complex regulations, our employment law team provides clear, practical advice and strong representation.</p><h3>Our Services</h3><ul><li>Unfair dismissal claims</li><li>Workplace discrimination and harassment</li><li>Redundancy and restructuring</li><li>Employment contract review and drafting</li><li>Workplace Investigations</li><li>WRC and Labour Court representation</li><li>Settlement negotiations</li></ul><h3>Protecting Your Rights</h3><p>Irish employment law is complex and constantly evolving. We ensure you understand your rights and obligations, and we work to achieve the best possible resolution for your situation.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Get Employment Advice</a></div></div></div></section>
+</div>
+
+<!-- ============ COMMERCIAL LITIGATION ============ -->
+<div class="page" id="page-commercial">
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Company &amp; <em>Commercial</em></div></div></div>
+<section class="d"><div class="si"><div class="pa-content"><p>Keans Solicitors provides strategic legal counsel to businesses of all sizes. From commercial disputes to company formation, we deliver practical, results-focused advice.</p><h3>Our Services</h3><ul><li>Commercial contract disputes</li><li>Shareholder and partnership disputes</li><li>Company formation and governance</li><li>Debt recovery and enforcement</li><li>Intellectual property disputes</li><li>Commercial lease disputes</li><li>Regulatory compliance</li></ul><h3>Strategic Legal Counsel</h3><p>Business disputes require a firm that understands both the legal landscape and the commercial realities. We work to resolve matters efficiently while protecting your business interests.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Discuss Your Business Matter</a></div></div></div></section>
+</div>
+
+<!-- ============ KEANS CONCIERGE ============ -->
+<div class="page" id="page-concierge">
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Premium Service</div><div class="st">Keans <em>Concierge</em></div></div></div>
+<section class="d"><div class="si"><div class="sd">A premium legal service designed for clients who require dedicated, priority access to our team. Keans Concierge provides an elevated level of personal attention and responsiveness.</div><div class="conc-grid"><div class="conc-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 014.12 4.18 2 2 0 016.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><h4>Priority Access</h4><p>Direct phone and email access to your dedicated solicitor with priority response times.</p></div><div class="conc-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><h4>Rapid Response</h4><p>Same-day consultations and urgent advice when you need it most.</p></div><div class="conc-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><h4>Dedicated Team</h4><p>A named solicitor and support team assigned exclusively to your matters.</p></div></div><div style="margin-top:2.5rem;text-align:center"><a class="btn btn-w" onclick="go('contact')">Enquire About Concierge</a></div></div></section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" id="page-contact">
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Get in Touch</div><div class="st">Contact <em>Us</em></div></div></div>
+<section class="d"><div class="si"><div class="cgrid"><div class="cform"><h3>Send Us a Message</h3><p>Fill in the form and our team will be in touch promptly.</p><div class="fr"><div class="fg"><label>First Name *</label><input placeholder="Your first name"></div><div class="fg"><label>Last Name *</label><input placeholder="Your last name"></div></div><div class="fr"><div class="fg"><label>Email *</label><input type="email" placeholder="you@example.com"></div><div class="fg"><label>Phone *</label><input type="tel" placeholder="01 234 5678"></div></div><div class="fg"><label>Area of Interest</label><select><option>Personal Injuries</option><option>Property Law</option><option>Family Law</option><option>Employment Law</option><option>Wills &amp; Probate</option><option>Commercial Litigation</option><option>Keans Concierge</option><option>Other</option></select></div><div class="fg"><label>Message *</label><textarea placeholder="Tell us about your situation..."></textarea></div><button class="btn btn-b" style="width:100%;justify-content:center">Submit Enquiry</button></div><div class="cinfo"><h3>Our Offices</h3><div class="coff"><h4>Dublin City Centre</h4><p>Keans Solicitors<br>4/5, Trinity Street<br>Dublin 2, DO2 RH32<br><br>Tel: <a href="tel:016769955">01 676 9955</a><br>Fax: 01 676 9975<br>D.X. 25 30 20 Dame Street</p></div><div class="coff"><h4>Lucan Office</h4><p>Keans Solicitors<br>Unit 3 Griffeen Centre<br>Lucan, Co. Dublin<br><br>Tel: <a href="tel:016100161">01 610 0161</a><br>Fax: 01 624 9803</p></div><div class="cmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.5!2d-6.262!3d53.343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9cb4f0b2e9%3A0x4ae20a0e3ead28d7!2sTrinity%20St%2C%20Dublin%202!5e0!3m2!1sen!2sie" allowfullscreen loading="lazy"></iframe></div></div></div></div></section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg-grid">
+    <div class="fb"><div class="logo" style="cursor:default"><span class="logo-t">Keans</span><span class="logo-s">Solicitors</span></div><p>Established 1988. Top-tier legal representation from Dublin City Centre and Lucan.</p><p class="fdisc">*In contentious business, a solicitor may not calculate fees as a percentage of any award or settlement. Keans Solicitors are wholly independent of and are not agents for the Injuries Board (PIAB) and are not endorsed by them.</p></div>
+    <div class="fc"><h4>Services</h4><a onclick="go('injuries')">Personal Injuries</a><a onclick="go('property')">Property Law</a><a onclick="go('family')">Family Law</a><a onclick="go('employment')">Employment Law</a><a onclick="go('wills')">Wills &amp; Probate</a><a onclick="go('commercial')">Commercial Law</a></div>
+    <div class="fc"><h4>Firm</h4><a onclick="go('about')">Dr Gerald Kean</a><a onclick="go('whoweare')">Who We Are</a><a onclick="go('media')">In the Media</a><a onclick="go('concierge')">Keans Concierge</a><a onclick="go('contact')">Contact Us</a><a href="#">Privacy Policy</a></div>
+    <div class="fc"><h4>Dublin Office</h4><p>4/5 Trinity Street<br>Dublin 2, DO2 RH32<br>01 676 9955</p><h4 style="margin-top:1.2rem">Lucan Office</h4><p>Unit 3 Griffeen Centre<br>Co. Dublin<br>01 610 0161</p></div>
+  </div>
+  <div class="fbot"><p>&copy; 2012-2026 Keans Solicitors. All Rights Reserved.</p><p>Website by <a href="https://ohigginsoneill.ie" target="_blank">O'Higgins O'Neill</a></p></div>
+</footer>
+
+<!-- CHAT -->
+<button class="cfab" id="cfab" onclick="tc()"><svg class="ic1" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg class="ic2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+<div class="cw" id="cwi"><div class="cwh"><div class="cwav">K</div><div><h4>Keans Solicitors</h4><p>Online now</p></div></div><div class="cwb" id="cb"><div class="cm b">Welcome to Keans Solicitors. How can we help?<span class="mt">Just now</span></div></div><div class="cwq" id="cq"><button class="cqi" onclick="sq('I have a personal injury claim')">Personal Injury</button><button class="cqi" onclick="sq('Property law advice')">Property</button><button class="cqi" onclick="sq('Help with a will')">Wills</button><button class="cqi" onclick="sq('Book a consultation')">Consultation</button></div><div class="cwt" id="ct"><div class="dd"><span></span><span></span><span></span></div>Typing...</div><div class="cwf"><input id="ci" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sm()"><button onclick="sm()"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div>
+
+<script>
+function go(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  var t=document.getElementById('page-'+p);
+  if(t){t.classList.add('active')}
+  document.querySelectorAll('.nl a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));
+  scrollTo({top:0,behavior:'instant'});
+}
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>50));
+
+var R={'personal injury':"We offer a free initial consultation for all personal injury matters. Could you describe what happened? Or call 01 676 9955.",'property':"We guide you through buying, selling, or conveyancing. Would you like to schedule a consultation?",'will':"We can help draft a will or handle probate. Shall we arrange a time?",'consultation':"Book at our Dublin office (4/5 Trinity Street) or Lucan (Griffeen Centre). Call 01 676 9955.",'employment':"Unfair dismissal, discrimination, or redundancy. Tell us more about your situation.",'family':"Family law matters require sensitivity. Would you like a private consultation?",'concierge':"Keans Concierge offers priority access and dedicated support. Would you like to learn more?",'default':"Thank you. We will respond soon. For urgent matters: 01 676 9955."};
+function tc(){document.getElementById('cfab').classList.toggle('open');document.getElementById('cwi').classList.toggle('open')}
+function gt(){return new Date().toLocaleTimeString('en-IE',{hour:'2-digit',minute:'2-digit'})}
+function am(t,s){var b=document.getElementById('cb'),m=document.createElement('div');m.className='cm '+s;m.innerHTML=t+'<span class="mt">'+gt()+'</span>';b.appendChild(m);b.scrollTop=b.scrollHeight}
+function gr(t){var l=t.toLowerCase();for(var k in R)if(k!=='default'&&l.includes(k))return R[k];if(l.match(/accident|injured|claim|hurt/))return R['personal injury'];if(l.match(/house|buying|selling/))return R['property'];if(l.match(/book|appointment|schedule/))return R['consultation'];if(l.match(/work|dismissed/))return R['employment'];if(l.match(/divorce|custody/))return R['family'];if(l.match(/hello|hi |hey/))return"Hello! How can we help today?";if(l.match(/thank/))return"You are very welcome.";return R['default']}
+function sm(){var i=document.getElementById('ci'),t=i.value.trim();if(!t)return;document.getElementById('cq').style.display='none';am(t,'u');i.value='';var ty=document.getElementById('ct');ty.classList.add('on');document.getElementById('cb').scrollTop=9999;setTimeout(()=>{ty.classList.remove('on');am(gr(t),'b')},900+Math.random()*600)}
+function sq(t){document.getElementById('ci').value=t;sm()}
+</script>
+</body>
+</html>
