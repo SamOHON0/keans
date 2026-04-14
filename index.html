@@ -3,8 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keans Solicitors | Dublin's Trusted Legal Partners</title>
+<title>Keans Solicitors Dublin | Personal Injury, Property & Family Law</title>
+<meta name="description" content="Keans Solicitors — Dublin's trusted legal firm since 1988. Specialist advice in personal injury, property law, family law, employment, wills & probate, and commercial litigation. Offices in Dublin 2 and Lucan.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://keanssolicitors.ie">
+<meta property="og:title" content="Keans Solicitors Dublin | Personal Injury, Property & Family Law">
+<meta property="og:description" content="Trusted Dublin solicitors since 1988. Expert advice in personal injury, property, family law, employment, wills, and commercial litigation. Free initial consultation.">
+<meta property="og:url" content="https://keanssolicitors.ie">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Keans Solicitors Dublin | Personal Injury, Property & Family Law">
+<meta name="twitter:description" content="Trusted Dublin solicitors since 1988. Expert advice in personal injury, property, family, employment, wills, and commercial law.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%232F54B6'/><text x='50' y='72' font-size='65' font-family='serif' font-weight='700' fill='white' text-anchor='middle'>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Keans Solicitors",
+  "url": "https://keanssolicitors.ie",
+  "logo": "https://keanssolicitors.ie/logo.png",
+  "description": "Established in 1988, Keans Solicitors is one of Dublin's most respected legal firms, providing expert advice in personal injury, property law, family law, employment law, wills and probate, and commercial litigation.",
+  "telephone": "+353-1-676-9955",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4/5 Trinity Street",
+      "addressLocality": "Dublin 2",
+      "postalCode": "D02 RH32",
+      "addressCountry": "IE"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Unit 3 Griffeen Centre",
+      "addressLocality": "Lucan, Co. Dublin",
+      "addressCountry": "IE"
+    }
+  ],
+  "areaServed": "Dublin, Ireland",
+  "foundingDate": "1988",
+  "knowsAbout": ["Personal Injury Law", "Property Law", "Family Law", "Employment Law", "Wills and Probate", "Commercial Litigation"],
+  "sameAs": []
+}
+</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--dk:#0f1d36;--dk2:#162544;--dk3:#1d3058;--blue:#2F54B6;--accent:#4b7bec;--white:#fff;--off:#e8ecf4;--muted:#8da0c4;--dim:#5a7099;--heading:'Playfair Display',Georgia,serif;--logo:'Cinzel',Georgia,serif;--body:'DM Sans',sans-serif}
@@ -175,6 +219,8 @@ nav.scrolled{background:rgba(47,84,182,0.97)}
 
 /* NEWS */
 .ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+a.nc{text-decoration:none;display:block}
+a.nc:hover{text-decoration:none}
 .nc{background:var(--dk);padding:2rem;transition:0.3s}
 .nc:hover{background:var(--dk2)}
 .nc .nd{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem}
@@ -265,6 +311,25 @@ footer{background:#0a1628;padding:3.5rem 4% 1.5rem}
 .cwf button svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2}
 
 /* RESPONSIVE */
+/* WHATSAPP */
+.wa-fab{position:fixed;bottom:4.5rem;right:1.2rem;z-index:1999;width:50px;height:50px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,0.35);transition:0.3s;text-decoration:none}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-fab svg{width:26px;height:26px;fill:#fff}
+
+/* COOKIE BANNER */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:3000;background:var(--dk2);border-top:1px solid rgba(255,255,255,0.08);padding:1rem 4%;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.cookie-bar.hidden{display:none}
+.cookie-bar p{font-size:0.78rem;color:var(--muted);line-height:1.5;max-width:700px}
+.cookie-bar p a{color:var(--accent);text-decoration:none}
+.cookie-btns{display:flex;gap:0.5rem}
+.cookie-btns button{font-family:var(--body);font-size:0.75rem;font-weight:600;padding:0.5rem 1.2rem;border-radius:4px;cursor:pointer;border:none;transition:0.2s}
+.cookie-btns .cb-accept{background:var(--blue);color:#fff}
+.cookie-btns .cb-decline{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.1)}
+
+/* FORM STATES */
+#form-msg.success{background:rgba(37,211,102,0.1);color:#25D366;border:1px solid rgba(37,211,102,0.2)}
+#form-msg.error{background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2)}
+
 @media(max-width:1024px){.hero-c{grid-template-columns:1fr;gap:3rem}.gc3,.pfeat{grid-template-columns:1fr 1fr}.pfeat{grid-column:span 2}.asplit{grid-template-columns:1fr}.aimg{max-width:360px}.cgrid{grid-template-columns:1fr}.fg-grid{grid-template-columns:1fr 1fr}.gc4{grid-template-columns:1fr 1fr}.strip{grid-template-columns:1fr}.ngrid{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr}.conc-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nl,.np{display:none}.burger{display:block}nav{padding:0 5%}.hero-c,.si{padding-left:5%;padding-right:5%}.gc3,.gc2,.gc4,.pfeat,.ngrid,.team-grid,.media-grid,.conc-grid{grid-template-columns:1fr}.pfeat{grid-column:span 1}.scard-g,.qgrid,.fr{grid-template-columns:1fr}.fg-grid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.trust{gap:1rem;padding:1rem 5%}.cw{width:calc(100vw - 1.5rem);right:0.75rem}.ph-t,.pa-hero-t{left:5%}}
 </style>
@@ -279,6 +344,7 @@ footer{background:#0a1628;padding:3.5rem 4% 1.5rem}
     <a onclick="go('whoweare')" data-p="whoweare">Who We Are</a>
     <a onclick="go('practice')" data-p="practice">Practice Areas</a>
     <a onclick="go('injuries')" data-p="injuries">Personal Injuries</a>
+    <a href="/blog" data-p="blog">Blog</a>
     <a onclick="go('contact')" data-p="contact">Contact</a>
   </div>
   <a href="tel:016769955" class="np"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 014.12 4.18 2 2 0 016.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>01 676 9955</a>
@@ -290,6 +356,7 @@ footer{background:#0a1628;padding:3.5rem 4% 1.5rem}
   <a onclick="go('whoweare');document.getElementById('mob').classList.remove('open')">Who We Are</a>
   <a onclick="go('practice');document.getElementById('mob').classList.remove('open')">Practice Areas</a>
   <a onclick="go('injuries');document.getElementById('mob').classList.remove('open')">Personal Injuries</a>
+  <a href="/blog">Blog</a>
   <a onclick="go('media');document.getElementById('mob').classList.remove('open')">In the Media</a>
   <a onclick="go('concierge');document.getElementById('mob').classList.remove('open')">Keans Concierge</a>
   <a onclick="go('contact');document.getElementById('mob').classList.remove('open')">Contact</a>
@@ -299,88 +366,88 @@ footer{background:#0a1628;padding:3.5rem 4% 1.5rem}
 <div class="page active" id="page-home">
 <section class="hero"><div class="hero-bg"></div><div class="hero-c"><div><div class="hero-tag">Established 1988 &middot; Dublin, Ireland</div><h1>Dublin's Trusted<br>Legal <em>Partners</em></h1><p class="hero-d">Top-tier legal representation with a personal touch. Professional, friendly, and accessible to everyone.</p><div class="hero-btns"><a class="btn btn-w" onclick="go('contact')">Free Consultation</a><a class="btn btn-o" onclick="go('practice')">Our Services</a></div></div><div><div class="scard"><div class="scard-n">35+</div><div class="scard-l">Years of dedicated legal service</div><p class="scard-t">Founded by Dr Gerald Kean. An unrivalled reputation in personal injury law and beyond.</p><div class="scard-hr"></div><div class="scard-g"><div class="scard-i" onclick="go('injuries')">Personal Injuries</div><div class="scard-i" onclick="go('property')">Property Law</div><div class="scard-i" onclick="go('family')">Family Law</div><div class="scard-i" onclick="go('employment')">Employment Law</div><div class="scard-i" onclick="go('wills')">Wills &amp; Probate</div><div class="scard-i" onclick="go('commercial')">Commercial Law</div></div></div></div></div></section>
 <div class="trust"><span>Law Society Regulated</span><span>Established 1988</span><span>Dublin &amp; Lucan Offices</span><span>Free Initial Consultation</span></div>
-<div class="strip"><div class="strip-i"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80" alt=""><div class="strip-lb"><h4>Expert Counsel</h4><p>35+ years of excellence</p></div></div><div class="strip-i"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt=""><div class="strip-lb"><h4>Comprehensive Service</h4><p>Six practice areas</p></div></div><div class="strip-i"><img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt=""><div class="strip-lb"><h4>Dublin Based</h4><p>City Centre &amp; Lucan</p></div></div></div>
-<section class="w"><div class="si"><div class="asplit"><div class="aimg"><div class="aimg-box"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80" alt=""></div><div class="apill">4/5 Trinity St<span>Dublin 2</span></div></div><div class="atxt"><div class="stag" style="color:var(--blue)">The Keans Difference</div><div class="st" style="color:var(--dk)">Professional, Friendly, <em>and Accessible</em></div><p>We pride ourselves on our professional yet approachable manner. While we have built a reputation for representing high-profile clients, our doors are open to everyone.</p><p>At our firm, top-tier legal expertise is accessible to all. We do not discriminate in our pursuit of justice for our clients.</p><div class="qgrid"><div class="qi"><h4>Transparent</h4><p>Open communication at every stage.</p></div><div class="qi"><h4>Competitive</h4><p>Extremely competitive pricing.</p></div><div class="qi"><h4>Approachable</h4><p>Relaxed, friendly environment.</p></div><div class="qi"><h4>Experienced</h4><p>35+ years in Dublin.</p></div></div></div></div></div></section>
-<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1507679799987-c73b7651ba23?w=1600&q=80" alt=""></div><div class="ban-c"><h2>Ready to Discuss <em>Your Case?</em></h2><p>Whether personal injury, property, or family matters, our team is here to help.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Schedule a Consultation</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
-<section class="d"><div class="si"><div class="stag">Latest</div><div class="st">Legal <em>News</em></div><div class="ngrid" style="margin-top:1.5rem"><div class="nc"><div class="nd">24 Oct 2024</div><h3>Motor-Insurance Premiums on the Rise</h3><p>Law Society Gazette reports on changes to motor insurance premium trends.</p></div><div class="nc"><div class="nd">19 Oct 2024</div><h3>Health Firm Subject to PI Claims Enters Liquidation</h3><p>A women's health firm facing personal injury claims enters liquidation.</p></div><div class="nc"><div class="nd">24 Sep 2024</div><h3>Lower Insurance Called for After High Court Drop</h3><p>Industry calls for premium reductions following decreased High Court claims.</p></div></div></div></section>
+<div class="strip"><div class="strip-i"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80" alt="Legal library at Keans Solicitors"><div class="strip-lb"><h4>Expert Counsel</h4><p>35+ years of excellence</p></div></div><div class="strip-i"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Legal document review"><div class="strip-lb"><h4>Comprehensive Service</h4><p>Six practice areas</p></div></div><div class="strip-i"><img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt="Dublin city skyline"><div class="strip-lb"><h4>Dublin Based</h4><p>City Centre &amp; Lucan</p></div></div></div>
+<section class="w"><div class="si"><div class="asplit"><div class="aimg"><div class="aimg-box"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80" alt="Keans Solicitors office"></div><div class="apill">4/5 Trinity St<span>Dublin 2</span></div></div><div class="atxt"><div class="stag" style="color:var(--blue)">The Keans Difference</div><div class="st" style="color:var(--dk)">Professional, Friendly, <em>and Accessible</em></div><p>We pride ourselves on our professional yet approachable manner. While we have built a reputation for representing high-profile clients, our doors are open to everyone.</p><p>At our firm, top-tier legal expertise is accessible to all. We do not discriminate in our pursuit of justice for our clients.</p><div class="qgrid"><div class="qi"><h4>Transparent</h4><p>Open communication at every stage.</p></div><div class="qi"><h4>Competitive</h4><p>Extremely competitive pricing.</p></div><div class="qi"><h4>Approachable</h4><p>Relaxed, friendly environment.</p></div><div class="qi"><h4>Experienced</h4><p>35+ years in Dublin.</p></div></div></div></div></div></section>
+<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1507679799987-c73b7651ba23?w=1600&q=80" alt="Dublin legal consultation"></div><div class="ban-c"><h2>Ready to Discuss <em>Your Case?</em></h2><p>Whether personal injury, property, or family matters, our team is here to help.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Schedule a Consultation</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
+<section class="d"><div class="si"><div class="stag">Latest</div><div class="st">Legal <em>Guides</em></div><div class="ngrid" style="margin-top:1.5rem"><a class="nc" href="/blog/personal-injury-claim-ireland.html"><div class="nd">Personal Injuries</div><h3>How to Make a Personal Injury Claim in Ireland</h3><p>What counts as a personal injury, the two-year time limit, how PIAB works, and what a solicitor does for you.</p></a><a class="nc" href="/blog/conveyancing-ireland.html"><div class="nd">Property Law</div><h3>How Long Does Conveyancing Take in Ireland?</h3><p>A stage-by-stage breakdown of the property purchase process, typical timelines, and what causes delays.</p></a><a class="nc" href="/blog/unfair-dismissal-ireland.html"><div class="nd">Employment Law</div><h3>Unfair Dismissal in Ireland: What Are Your Rights?</h3><p>The one-year service threshold, constructive dismissal, the WRC complaint process, and available remedies.</p></a></div><div style="text-align:center;margin-top:2rem"><a href="/blog" class="btn btn-o" style="border-color:rgba(255,255,255,0.2)">View All Guides</a></div></div></section>
 </div>
 
 <!-- ============ DR GERALD KEAN ============ -->
 <div class="page" id="page-about">
-<div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Principal</div><div class="st">Dr Gerald Kean, <em>Solicitor</em></div></div></div>
-<section class="w"><div class="si"><div class="asplit"><div class="aimg"><div class="aimg-box"><img src="Dr_Gerald_Kean.jpg" alt="Dr Gerald Kean"></div><div class="apill">Est. 1988<span>Qualified 1980</span></div></div><div class="atxt"><h3>Background</h3><p>Dr Gerald Kean is the Principal of Keans Solicitors, 4/5 Trinity Street, Dublin 2. Born in 1957, he was educated in Colaiste Chriost Ri, Cork, and De La Salle in Wicklow.</p><p>He qualified as a Solicitor in 1980, apprenticed under the late Michael Martin Solicitor in Capel Street. He obtained a Bachelor of Civil Law Degree from UCD and an Honorary Doctorate from the American University in Florida.</p><h3>The Practice</h3><p>In the late 1980s, Dr Kean opened his practice on Exchequer Street, later moving to Pembroke Street in the early 1990s. The firm has steadily grown and expanded over the years. His main area of focus is Personal Injury Claims.</p><p>He specialises in representing a wide variety of clients with a wide variety of legal matters. The firm prides itself on being transparent, open, efficient and in constant communication with clients.</p><h3>High-Profile Representation</h3><p>Over the years, Gerald has been involved in acting for national and international artists, premiership league footballers, politicians, and media personnel. Despite this high-profile client base, the firm maintains its commitment to providing excellent legal services to every client who walks through the door.</p><div style="margin-top:2rem;display:flex;gap:0.8rem"><a class="btn btn-b" onclick="go('contact')">Get in Touch</a><a class="btn btn-b" onclick="go('media')" style="background:var(--dk);border-color:var(--dk)">In the Media</a></div></div></div></div></section>
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Keans Solicitors Dublin office"><div class="ph-t"><div class="stag" style="color:var(--muted)">Principal</div><div class="st">Dr Gerald Kean, <em>Solicitor</em></div></div></div>
+<section class="w"><div class="si"><div class="asplit"><div class="aimg"><div class="aimg-box"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="Dr Gerald Kean, Principal of Keans Solicitors"></div><div class="apill">Est. 1988<span>Qualified 1980</span></div></div><div class="atxt"><h3>Background</h3><p>Dr Gerald Kean is the Principal of Keans Solicitors, 4/5 Trinity Street, Dublin 2. Born in 1957, he was educated in Colaiste Chriost Ri, Cork, and De La Salle in Wicklow.</p><p>He qualified as a Solicitor in 1980, apprenticed under the late Michael Martin Solicitor in Capel Street. He obtained a Bachelor of Civil Law Degree from UCD and an Honorary Doctorate from the American University in Florida.</p><h3>The Practice</h3><p>In the late 1980s, Dr Kean opened his practice on Exchequer Street, later moving to Pembroke Street in the early 1990s. The firm has steadily grown and expanded over the years. His main area of focus is Personal Injury Claims.</p><p>He specialises in representing a wide variety of clients with a wide variety of legal matters. The firm prides itself on being transparent, open, efficient and in constant communication with clients.</p><h3>High-Profile Representation</h3><p>Over the years, Gerald has been involved in acting for national and international artists, premiership league footballers, politicians, and media personnel. Despite this high-profile client base, the firm maintains its commitment to providing excellent legal services to every client who walks through the door.</p><div style="margin-top:2rem;display:flex;gap:0.8rem"><a class="btn btn-b" onclick="go('contact')">Get in Touch</a><a class="btn btn-b" onclick="go('media')" style="background:var(--dk);border-color:var(--dk)">In the Media</a></div></div></div></div></section>
 </div>
 
 <!-- ============ WHO WE ARE ============ -->
 <div class="page" id="page-whoweare">
-<div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Our Firm</div><div class="st">Who <em>We Are</em></div></div></div>
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Keans Solicitors team"><div class="ph-t"><div class="stag" style="color:var(--muted)">Our Firm</div><div class="st">Who <em>We Are</em></div></div></div>
 <section class="d"><div class="si"><div class="sd">Keans Solicitors was established in 1988 and enjoys a large public profile. Over the years the firm has grown from a single practitioner into a full-service Dublin law firm with offices in both the city centre and Lucan.</div><div class="team-grid"><div class="team-card"><div class="tc-icon">GK</div><h4>Dr Gerald Kean</h4><p>Principal &amp; Founder. Specialising in Personal Injury Claims with over 35 years of experience.</p></div><div class="team-card"><div class="tc-icon">KS</div><h4>Dedicated Team</h4><p>Our team of experienced solicitors and support staff work collaboratively to deliver results for every client.</p></div><div class="team-card"><div class="tc-icon">D2</div><h4>Two Offices</h4><p>Serving clients from 4/5 Trinity Street, Dublin 2 and Unit 3 Griffeen Centre, Lucan, Co. Dublin.</p></div></div></div></section>
 <section class="w"><div class="si"><div class="stag" style="color:var(--blue)">Our Values</div><div class="st" style="color:var(--dk)">What Sets <em>Us Apart</em></div><div class="sd" style="color:#5a6577">We are not just solicitors. We are your trusted advisors, committed to achieving the best possible outcome in every case.</div><div class="qgrid"><div class="qi"><h4>Client-Focused</h4><p>Every case receives personal attention from senior solicitors.</p></div><div class="qi"><h4>Results-Driven</h4><p>We fight for the best possible outcome the law permits.</p></div><div class="qi"><h4>Transparent Fees</h4><p>No surprises. Costs are discussed upfront and openly.</p></div><div class="qi"><h4>Accessible</h4><p>Two offices across Dublin. Easy to reach, easy to meet.</p></div></div></div></section>
 </div>
 
 <!-- ============ IN THE MEDIA ============ -->
 <div class="page" id="page-media">
-<div class="ph"><img src="https://images.unsplash.com/photo-1504711434969-e33886168d3c?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Press</div><div class="st">In the <em>Media</em></div></div></div>
+<div class="ph"><img src="https://images.unsplash.com/photo-1504711434969-e33886168d3c?w=1600&q=80" alt="Keans Solicitors in the media"><div class="ph-t"><div class="stag" style="color:var(--muted)">Press</div><div class="st">In the <em>Media</em></div></div></div>
 <section class="d"><div class="si"><div class="sd">Dr Gerald Kean and Keans Solicitors are frequently featured in national and international media, reflecting the firm's prominence in Irish legal affairs.</div><div class="media-grid"><div class="media-item"><div class="mi-date">October 2024</div><h4>Motor-insurance premiums crept up last year</h4><p>Featured in the Law Society of Ireland Gazette discussing changes to motor insurance premium trends and their impact on personal injury claimants.</p></div><div class="media-item"><div class="mi-date">October 2024</div><h4>Women's health firm subject to PI claims goes into liquidation</h4><p>Coverage of the firm's involvement in proceedings relating to personal injury claims against a women's health provider.</p></div><div class="media-item"><div class="mi-date">October 2024</div><h4>High Court assignments for Michaelmas term</h4><p>The Law Society of Ireland reports on High Court term assignments with relevance to ongoing litigation matters.</p></div><div class="media-item"><div class="mi-date">September 2024</div><h4>Call for lower insurance premiums after dramatic drop in High Court claims</h4><p>Dr Kean comments on the implications of reduced High Court claim volumes for insurance premium reform in Ireland.</p></div></div></div></section>
 </div>
 
 <!-- ============ PRACTICE AREAS ============ -->
 <div class="page" id="page-practice">
-<div class="ph"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">What We Do</div><div class="st">Our Practice <em>Areas</em></div></div></div>
-<section class="d"><div class="si" style="padding-bottom:0"><div class="sd">We cover all areas of law that matter to individuals and businesses across Dublin and beyond.</div></div><div class="g1 gc3"><div class="pfeat" onclick="go('injuries')"><div class="pfeat-bg"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt=""></div><div class="pfeat-in"><div class="stag">01 &middot; Our Speciality</div><h3>Personal Injuries</h3><p>Road traffic accidents, workplace injuries, medical negligence, slip and fall. We offer a free initial consultation for all personal injury matters.</p><a class="btn btn-w" onclick="go('injuries')" style="font-size:0.75rem;padding:0.7rem 1.5rem">Learn More</a></div></div><div onclick="go('property')"><div class="gn">02</div><h3>Property Law</h3><p>Buying, selling, or conveyancing. We guide you through every step of your property transaction.</p><span class="garr">View &rarr;</span></div><div onclick="go('family')"><div class="gn">03</div><h3>Family Law</h3><p>Sensitive support for separation, divorce, custody, and access matters.</p><span class="garr">View &rarr;</span></div><div onclick="go('wills')"><div class="gn">04</div><h3>Wills &amp; Probate</h3><p>Handling probate with care and guiding you through with sensitivity.</p><span class="garr">View &rarr;</span></div><div onclick="go('employment')"><div class="gn">05</div><h3>Employment Law</h3><p>Unfair dismissal, discrimination, redundancy. We advocate for your rights.</p><span class="garr">View &rarr;</span></div><div onclick="go('commercial')"><div class="gn">06</div><h3>Commercial Litigation</h3><p>Strategic counsel for business disputes and corporate law matters.</p><span class="garr">View &rarr;</span></div></div></section>
-<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=1600&q=80" alt=""></div><div class="ban-c"><h2>Need Legal <em>Advice?</em></h2><p>Whatever your matter, our experienced team is ready to help.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Contact Us</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
+<div class="ph"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1600&q=80" alt="Practice areas at Keans Solicitors"><div class="ph-t"><div class="stag" style="color:var(--muted)">What We Do</div><div class="st">Our Practice <em>Areas</em></div></div></div>
+<section class="d"><div class="si" style="padding-bottom:0"><div class="sd">We cover all areas of law that matter to individuals and businesses across Dublin and beyond.</div></div><div class="g1 gc3"><div class="pfeat" onclick="go('injuries')"><div class="pfeat-bg"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Personal injury legal consultation"></div><div class="pfeat-in"><div class="stag">01 &middot; Our Speciality</div><h3>Personal Injuries</h3><p>Road traffic accidents, workplace injuries, medical negligence, slip and fall. We offer a free initial consultation for all personal injury matters.</p><a class="btn btn-w" onclick="go('injuries')" style="font-size:0.75rem;padding:0.7rem 1.5rem">Learn More</a></div></div><div onclick="go('property')"><div class="gn">02</div><h3>Property Law</h3><p>Buying, selling, or conveyancing. We guide you through every step of your property transaction.</p><span class="garr">View &rarr;</span></div><div onclick="go('family')"><div class="gn">03</div><h3>Family Law</h3><p>Sensitive support for separation, divorce, custody, and access matters.</p><span class="garr">View &rarr;</span></div><div onclick="go('wills')"><div class="gn">04</div><h3>Wills &amp; Probate</h3><p>Handling probate with care and guiding you through with sensitivity.</p><span class="garr">View &rarr;</span></div><div onclick="go('employment')"><div class="gn">05</div><h3>Employment Law</h3><p>Unfair dismissal, discrimination, redundancy. We advocate for your rights.</p><span class="garr">View &rarr;</span></div><div onclick="go('commercial')"><div class="gn">06</div><h3>Commercial Litigation</h3><p>Strategic counsel for business disputes and corporate law matters.</p><span class="garr">View &rarr;</span></div></div></section>
+<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=1600&q=80" alt="Legal advice consultation"></div><div class="ban-c"><h2>Need Legal <em>Advice?</em></h2><p>Whatever your matter, our experienced team is ready to help.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Contact Us</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
 </div>
 
 <!-- ============ PERSONAL INJURIES ============ -->
 <div class="page" id="page-injuries">
-<div class="pih"><img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1600&q=80" alt=""><div class="pih-t"><div class="stag" style="color:var(--muted)">Our Speciality</div><h1>Your Path to <em>Recovery</em><br>Starts Here</h1><p>Injured and overwhelmed? We guide you through every step of your personal injury journey.</p><a class="btn btn-w" onclick="go('contact')">Free Consultation</a></div></div>
+<div class="pih"><img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1600&q=80" alt="Personal injury recovery support"><div class="pih-t"><div class="stag" style="color:var(--muted)">Our Speciality</div><h1>Your Path to <em>Recovery</em><br>Starts Here</h1><p>Injured and overwhelmed? We guide you through every step of your personal injury journey.</p><a class="btn btn-w" onclick="go('contact')">Free Consultation</a></div></div>
 <div class="g1 gc3"><div><div class="gn">01</div><h3>You Are Not Alone</h3><p>We are here to listen and understand your unique situation.</p></div><div><div class="gn">02</div><h3>It Was Not Your Fault</h3><p>You should not bear the burden of someone else's mistake.</p></div><div><div class="gn">03</div><h3>Your Pain Is Valid</h3><p>Your feelings are important, heard, and taken seriously.</p></div></div>
 <section class="d"><div class="si"><div class="stag">Expertise</div><div class="st">Cases <em>We Handle</em></div><div class="g1 gc2" style="margin-top:1.5rem"><div><h3 class="dot">Car Accidents</h3><p class="pdot">From minor collisions to serious incidents. Full compensation under Irish law.</p></div><div><h3 class="dot">Workplace Injuries</h3><p class="pdot">Falls, equipment failures, unsafe conditions. We hold employers accountable.</p></div><div><h3 class="dot">Medical Malpractice</h3><p class="pdot">When healthcare providers fail their duty of care, we seek justice.</p></div><div><h3 class="dot">Slip and Fall</h3><p class="pdot">Unsafe conditions in public or private spaces. We build the strongest case.</p></div></div></div></section>
 <section class="d" style="border-top:1px solid rgba(255,255,255,0.04)"><div class="si"><div class="stag">Process</div><div class="st">Our Approach to <em>Your Case</em></div><div class="g1 gc4" style="margin-top:1.5rem"><div class="tc"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><h4>1. Consultation</h4><p>We listen and explain your rights.</p></div><div class="tc"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><h4>2. Investigation</h4><p>Evidence, witnesses, reports.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>3. Negotiation</h4><p>Maximising your compensation.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h4>4. Litigation</h4><p>Court if settlement fails.</p></div></div></div></section>
 <section class="d" style="border-top:1px solid rgba(255,255,255,0.04)"><div class="si"><div class="stag">Compensation</div><div class="st">What You <em>Deserve</em></div><div class="g1 gc4" style="margin-top:1.5rem"><div class="tc"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>Medical Expenses</h4><p>All injury-related costs covered.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg><h4>Pain &amp; Suffering</h4><p>Emotional distress recognised.</p></div><div class="tc"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><h4>Lost Income</h4><p>Impact on your ability to work.</p></div><div class="tc"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg><h4>Rehabilitation</h4><p>Physio and devices covered.</p></div></div></div></section>
-<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80" alt=""></div><div class="ban-c"><h2>Take the First Step <em>Today</em></h2><p>Your journey to justice begins with a single step.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Free Consultation</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
+<div class="ban"><div class="ban-bg"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80" alt="Scales of justice"></div><div class="ban-c"><h2>Take the First Step <em>Today</em></h2><p>Your journey to justice begins with a single step.</p><div class="ban-btns"><a class="btn btn-w" onclick="go('contact')">Free Consultation</a><a href="tel:016769955" class="btn btn-o">Call 01 676 9955</a></div></div></div>
 </div>
 
 <!-- ============ PROPERTY LAW ============ -->
 <div class="page" id="page-property">
-<div class="pa-hero"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Property <em>Law</em></div></div></div>
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80" alt="Property law services in Dublin"><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Property <em>Law</em></div></div></div>
 <section class="d"><div class="si"><div class="pa-content"><p>If you are selling a property or thinking about selling a property, buying a property, or involved in any property transaction, Keans Solicitors can assist you at every stage of the process.</p><h3>Our Property Services</h3><ul><li>Residential conveyancing (buying and selling)</li><li>Commercial property transactions</li><li>Lease agreements and reviews</li><li>Landlord and tenant disputes</li><li>Property development advice</li><li>Mortgage and remortgage matters</li><li>Title disputes and boundary issues</li></ul><h3>Why Choose Keans for Property</h3><p>Our experienced property team ensures that your transaction proceeds smoothly, efficiently, and with full transparency on costs. We keep you informed at every step and work to protect your interests throughout.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Discuss Your Property Matter</a></div></div></div></section>
 </div>
 
 <!-- ============ FAMILY LAW ============ -->
 <div class="page" id="page-family">
-<div class="pa-hero"><img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Family <em>Law</em></div></div></div>
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80" alt="Family law support and guidance"><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Family <em>Law</em></div></div></div>
 <section class="d"><div class="si"><div class="pa-content"><p>Family law matters are among the most personal and sensitive legal issues you may face. At Keans Solicitors, we approach every family case with compassion, discretion, and determination to protect your interests.</p><h3>Our Family Law Services</h3><ul><li>Judicial separation and divorce</li><li>Child custody and access arrangements</li><li>Maintenance and financial settlements</li><li>Domestic violence and protection orders</li><li>Prenuptial and postnuptial agreements</li><li>Guardianship matters</li><li>Mediation and collaborative law</li></ul><h3>Our Approach</h3><p>We understand the emotional toll of family disputes. Our solicitors provide calm, measured advice aimed at achieving the best outcome for you and your family, whether through negotiation or, where necessary, through the courts.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Speak With Us Confidentially</a></div></div></div></section>
 </div>
 
 <!-- ============ WILLS & PROBATE ============ -->
 <div class="page" id="page-wills">
-<div class="pa-hero"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Wills &amp; <em>Probate</em></div></div></div>
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80" alt="Wills and probate legal services"><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Wills &amp; <em>Probate</em></div></div></div>
 <section class="d"><div class="si"><div class="pa-content"><p>After a loved one has passed it is an emotional and difficult time. We handle probate matters with care, guiding you through the process with sensitivity and professionalism.</p><h3>Our Services</h3><ul><li>Drafting and reviewing wills</li><li>Administration of estates</li><li>Grant of probate applications</li><li>Estate planning and tax advice</li><li>Enduring powers of attorney</li><li>Contested wills and inheritance disputes</li><li>Trust creation and administration</li></ul><h3>Planning for the Future</h3><p>Making a will is one of the most important things you can do to protect your family. We make the process straightforward and ensure your wishes are clearly documented and legally sound.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Arrange a Consultation</a></div></div></div></section>
 </div>
 
 <!-- ============ EMPLOYMENT LAW ============ -->
 <div class="page" id="page-employment">
-<div class="pa-hero"><img src="https://images.unsplash.com/photo-1507679799987-c73b7651ba23?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Employment <em>Law</em></div></div></div>
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1507679799987-c73b7651ba23?w=1600&q=80" alt="Employment law representation"><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Employment <em>Law</em></div></div></div>
 <section class="d"><div class="si"><div class="pa-content"><p>Whether you are an employee facing unfair treatment or an employer navigating complex regulations, our employment law team provides clear, practical advice and strong representation.</p><h3>Our Services</h3><ul><li>Unfair dismissal claims</li><li>Workplace discrimination and harassment</li><li>Redundancy and restructuring</li><li>Employment contract review and drafting</li><li>Workplace Investigations</li><li>WRC and Labour Court representation</li><li>Settlement negotiations</li></ul><h3>Protecting Your Rights</h3><p>Irish employment law is complex and constantly evolving. We ensure you understand your rights and obligations, and we work to achieve the best possible resolution for your situation.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Get Employment Advice</a></div></div></div></section>
 </div>
 
 <!-- ============ COMMERCIAL LITIGATION ============ -->
 <div class="page" id="page-commercial">
-<div class="pa-hero"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt=""><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Company &amp; <em>Commercial</em></div></div></div>
+<div class="pa-hero"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt="Commercial litigation and company law"><div class="pa-hero-t"><div class="stag" style="color:var(--muted)">Practice Area</div><div class="st">Company &amp; <em>Commercial</em></div></div></div>
 <section class="d"><div class="si"><div class="pa-content"><p>Keans Solicitors provides strategic legal counsel to businesses of all sizes. From commercial disputes to company formation, we deliver practical, results-focused advice.</p><h3>Our Services</h3><ul><li>Commercial contract disputes</li><li>Shareholder and partnership disputes</li><li>Company formation and governance</li><li>Debt recovery and enforcement</li><li>Intellectual property disputes</li><li>Commercial lease disputes</li><li>Regulatory compliance</li></ul><h3>Strategic Legal Counsel</h3><p>Business disputes require a firm that understands both the legal landscape and the commercial realities. We work to resolve matters efficiently while protecting your business interests.</p><div style="margin-top:2rem"><a class="btn btn-w" onclick="go('contact')">Discuss Your Business Matter</a></div></div></div></section>
 </div>
 
 <!-- ============ KEANS CONCIERGE ============ -->
 <div class="page" id="page-concierge">
-<div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Premium Service</div><div class="st">Keans <em>Concierge</em></div></div></div>
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80" alt="Keans Solicitors premium legal services"><div class="ph-t"><div class="stag" style="color:var(--muted)">Premium Service</div><div class="st">Keans <em>Concierge</em></div></div></div>
 <section class="d"><div class="si"><div class="sd">A premium legal service designed for clients who require dedicated, priority access to our team. Keans Concierge provides an elevated level of personal attention and responsiveness.</div><div class="conc-grid"><div class="conc-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 014.12 4.18 2 2 0 016.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><h4>Priority Access</h4><p>Direct phone and email access to your dedicated solicitor with priority response times.</p></div><div class="conc-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><h4>Rapid Response</h4><p>Same-day consultations and urgent advice when you need it most.</p></div><div class="conc-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><h4>Dedicated Team</h4><p>A named solicitor and support team assigned exclusively to your matters.</p></div></div><div style="margin-top:2.5rem;text-align:center"><a class="btn btn-w" onclick="go('contact')">Enquire About Concierge</a></div></div></section>
 </div>
 
 <!-- ============ CONTACT ============ -->
 <div class="page" id="page-contact">
-<div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80" alt=""><div class="ph-t"><div class="stag" style="color:var(--muted)">Get in Touch</div><div class="st">Contact <em>Us</em></div></div></div>
-<section class="d"><div class="si"><div class="cgrid"><div class="cform"><h3>Send Us a Message</h3><p>Fill in the form and our team will be in touch promptly.</p><div class="fr"><div class="fg"><label>First Name *</label><input placeholder="Your first name"></div><div class="fg"><label>Last Name *</label><input placeholder="Your last name"></div></div><div class="fr"><div class="fg"><label>Email *</label><input type="email" placeholder="you@example.com"></div><div class="fg"><label>Phone *</label><input type="tel" placeholder="01 234 5678"></div></div><div class="fg"><label>Area of Interest</label><select><option>Personal Injuries</option><option>Property Law</option><option>Family Law</option><option>Employment Law</option><option>Wills &amp; Probate</option><option>Commercial Litigation</option><option>Keans Concierge</option><option>Other</option></select></div><div class="fg"><label>Message *</label><textarea placeholder="Tell us about your situation..."></textarea></div><button class="btn btn-b" style="width:100%;justify-content:center">Submit Enquiry</button></div><div class="cinfo"><h3>Our Offices</h3><div class="coff"><h4>Dublin City Centre</h4><p>Keans Solicitors<br>4/5, Trinity Street<br>Dublin 2, DO2 RH32<br><br>Tel: <a href="tel:016769955">01 676 9955</a><br>Fax: 01 676 9975<br>D.X. 25 30 20 Dame Street</p></div><div class="coff"><h4>Lucan Office</h4><p>Keans Solicitors<br>Unit 3 Griffeen Centre<br>Lucan, Co. Dublin<br><br>Tel: <a href="tel:016100161">01 610 0161</a><br>Fax: 01 624 9803</p></div><div class="cmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.5!2d-6.262!3d53.343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9cb4f0b2e9%3A0x4ae20a0e3ead28d7!2sTrinity%20St%2C%20Dublin%202!5e0!3m2!1sen!2sie" allowfullscreen loading="lazy"></iframe></div></div></div></div></section>
+<div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80" alt="Contact Keans Solicitors"><div class="ph-t"><div class="stag" style="color:var(--muted)">Get in Touch</div><div class="st">Contact <em>Us</em></div></div></div>
+<section class="d"><div class="si"><div class="cgrid"><div class="cform" id="contact-form"><h3>Send Us a Message</h3><p>Fill in the form and our team will be in touch promptly.</p><div class="fr"><div class="fg"><label>First Name *</label><input name="first_name" placeholder="Your first name" required></div><div class="fg"><label>Last Name *</label><input name="last_name" placeholder="Your last name" required></div></div><div class="fr"><div class="fg"><label>Email *</label><input type="email" name="email" placeholder="you@example.com" required></div><div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="01 234 5678" required></div></div><div class="fg"><label>Area of Interest</label><select name="area"><option>Personal Injuries</option><option>Property Law</option><option>Family Law</option><option>Employment Law</option><option>Wills &amp; Probate</option><option>Commercial Litigation</option><option>Keans Concierge</option><option>Other</option></select></div><div class="fg"><label>Message *</label><textarea name="message" placeholder="Tell us about your situation..." required></textarea></div><button class="btn btn-b" style="width:100%;justify-content:center" onclick="submitForm()" id="form-btn">Submit Enquiry</button><div id="form-msg" style="display:none;margin-top:1rem;padding:0.8rem;border-radius:4px;font-size:0.85rem;text-align:center"></div></div><div class="cinfo"><h3>Our Offices</h3><div class="coff"><h4>Dublin City Centre</h4><p>Keans Solicitors<br>4/5, Trinity Street<br>Dublin 2, DO2 RH32<br><br>Tel: <a href="tel:016769955">01 676 9955</a><br>Fax: 01 676 9975<br>D.X. 25 30 20 Dame Street</p></div><div class="coff"><h4>Lucan Office</h4><p>Keans Solicitors<br>Unit 3 Griffeen Centre<br>Lucan, Co. Dublin<br><br>Tel: <a href="tel:016100161">01 610 0161</a><br>Fax: 01 624 9803</p></div><div class="cmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.5!2d-6.262!3d53.343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9cb4f0b2e9%3A0x4ae20a0e3ead28d7!2sTrinity%20St%2C%20Dublin%202!5e0!3m2!1sen!2sie" allowfullscreen loading="lazy"></iframe></div></div></div></div></section>
 </div>
 
 <!-- FOOTER -->
@@ -388,32 +455,143 @@ footer{background:#0a1628;padding:3.5rem 4% 1.5rem}
   <div class="fg-grid">
     <div class="fb"><div class="logo" style="cursor:default"><span class="logo-t">Keans</span><span class="logo-s">Solicitors</span></div><p>Established 1988. Top-tier legal representation from Dublin City Centre and Lucan.</p><p class="fdisc">*In contentious business, a solicitor may not calculate fees as a percentage of any award or settlement. Keans Solicitors are wholly independent of and are not agents for the Injuries Board (PIAB) and are not endorsed by them.</p></div>
     <div class="fc"><h4>Services</h4><a onclick="go('injuries')">Personal Injuries</a><a onclick="go('property')">Property Law</a><a onclick="go('family')">Family Law</a><a onclick="go('employment')">Employment Law</a><a onclick="go('wills')">Wills &amp; Probate</a><a onclick="go('commercial')">Commercial Law</a></div>
-    <div class="fc"><h4>Firm</h4><a onclick="go('about')">Dr Gerald Kean</a><a onclick="go('whoweare')">Who We Are</a><a onclick="go('media')">In the Media</a><a onclick="go('concierge')">Keans Concierge</a><a onclick="go('contact')">Contact Us</a><a href="#">Privacy Policy</a></div>
+    <div class="fc"><h4>Firm</h4><a onclick="go('about')">Dr Gerald Kean</a><a onclick="go('whoweare')">Who We Are</a><a href="/blog">Blog</a><a onclick="go('media')">In the Media</a><a onclick="go('concierge')">Keans Concierge</a><a onclick="go('contact')">Contact Us</a><a href="#">Privacy Policy</a></div>
     <div class="fc"><h4>Dublin Office</h4><p>4/5 Trinity Street<br>Dublin 2, DO2 RH32<br>01 676 9955</p><h4 style="margin-top:1.2rem">Lucan Office</h4><p>Unit 3 Griffeen Centre<br>Co. Dublin<br>01 610 0161</p></div>
   </div>
   <div class="fbot"><p>&copy; 2012-2026 Keans Solicitors. All Rights Reserved.</p><p>Website by <a href="https://ohigginsoneill.ie" target="_blank">O'Higgins O'Neill</a></p></div>
 </footer>
 
+<!-- WHATSAPP -->
+<a href="https://wa.me/35316769955?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services." target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-bar" id="cookie-bar">
+<p>We use cookies to improve your experience and for analytics. By continuing to use this site, you consent to our use of cookies. <a href="#" onclick="go('contact');return false">Learn more</a></p>
+<div class="cookie-btns"><button class="cb-accept" onclick="acceptCookies()">Accept</button><button class="cb-decline" onclick="declineCookies()">Decline</button></div>
+</div>
+
 <!-- CHAT -->
 <button class="cfab" id="cfab" onclick="tc()"><svg class="ic1" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg class="ic2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-<div class="cw" id="cwi"><div class="cwh"><div class="cwav">K</div><div><h4>Keans Solicitors</h4><p>Online now</p></div></div><div class="cwb" id="cb"><div class="cm b">Welcome to Keans Solicitors. How can we help?<span class="mt">Just now</span></div></div><div class="cwq" id="cq"><button class="cqi" onclick="sq('I have a personal injury claim')">Personal Injury</button><button class="cqi" onclick="sq('Property law advice')">Property</button><button class="cqi" onclick="sq('Help with a will')">Wills</button><button class="cqi" onclick="sq('Book a consultation')">Consultation</button></div><div class="cwt" id="ct"><div class="dd"><span></span><span></span><span></span></div>Typing...</div><div class="cwf"><input id="ci" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sm()"><button onclick="sm()"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div>
+<div class="cw" id="cwi"><div class="cwh"><div class="cwav">K</div><div><h4>Keans Solicitors</h4><p>Online now</p></div></div><div class="cwb" id="cb"><div class="cm b">Welcome to Keans Solicitors. How can we help?<span class="mt">Just now</span></div></div><div class="cwq" id="cq"><button class="cqi" onclick="sq('I have a personal injury claim')">Personal Injury</button><button class="cqi" onclick="sq('Property law advice')">Property</button><button class="cqi" onclick="sq('Help with a will')">Wills</button><button class="cqi" onclick="sq('Employment issue')">Employment</button><button class="cqi" onclick="sq('Book a consultation')">Book</button><button class="cqi" onclick="sq('Where are your offices?')">Location</button></div><div class="cwt" id="ct"><div class="dd"><span></span><span></span><span></span></div>Typing...</div><div class="cwf"><input id="ci" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sm()"><button onclick="sm()"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div>
 
 <script>
+/* ROUTING */
 function go(p){
-  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(function(x){x.classList.remove('active')});
   var t=document.getElementById('page-'+p);
   if(t){t.classList.add('active')}
-  document.querySelectorAll('.nl a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));
+  document.querySelectorAll('.nl a').forEach(function(a){a.classList.toggle('on',a.dataset.p===p)});
+  try{if(window.location.hash!=='#'+p){history.pushState(null,null,'#'+p)}}catch(e){}
   scrollTo({top:0,behavior:'instant'});
+  document.getElementById('mob').classList.remove('open');
 }
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>50));
+function route(){
+  var h=window.location.hash.replace('#','');
+  if(h&&document.getElementById('page-'+h)){go(h)}else{go('home')}
+}
+window.addEventListener('hashchange',route);
+window.addEventListener('DOMContentLoaded',function(){
+  route();
+  if(localStorage.getItem('cookies_set')){document.getElementById('cookie-bar').classList.add('hidden')}
+});
+window.addEventListener('popstate',route);
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',scrollY>50)});
 
-var R={'personal injury':"We offer a free initial consultation for all personal injury matters. Could you describe what happened? Or call 01 676 9955.",'property':"We guide you through buying, selling, or conveyancing. Would you like to schedule a consultation?",'will':"We can help draft a will or handle probate. Shall we arrange a time?",'consultation':"Book at our Dublin office (4/5 Trinity Street) or Lucan (Griffeen Centre). Call 01 676 9955.",'employment':"Unfair dismissal, discrimination, or redundancy. Tell us more about your situation.",'family':"Family law matters require sensitivity. Would you like a private consultation?",'concierge':"Keans Concierge offers priority access and dedicated support. Would you like to learn more?",'default':"Thank you. We will respond soon. For urgent matters: 01 676 9955."};
+/* FORM */
+function submitForm(){
+  var f=document.getElementById('contact-form');
+  var inputs=f.querySelectorAll('[required]');
+  var valid=true;
+  inputs.forEach(function(inp){if(!inp.value.trim()){valid=false;inp.style.borderColor='#ef4444'}else{inp.style.borderColor=''}});
+  if(!valid){showMsg('Please fill in all required fields.','error');return}
+  var btn=document.getElementById('form-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  var data=new FormData();
+  f.querySelectorAll('input,select,textarea').forEach(function(el){if(el.name)data.append(el.name,el.value)});
+  fetch('https://formspree.io/f/YOUR_FORMSPREE_ID',{method:'POST',body:data,headers:{'Accept':'application/json'}})
+  .then(function(r){
+    if(r.ok){showMsg('Thank you! We will be in touch shortly.','success');f.querySelectorAll('input,textarea').forEach(function(el){el.value=''})}
+    else{showMsg('Something went wrong. Please call 01 676 9955.','error')}
+    btn.textContent='Submit Enquiry';btn.disabled=false;
+  })
+  .catch(function(){showMsg('Connection error. Please call 01 676 9955.','error');btn.textContent='Submit Enquiry';btn.disabled=false});
+}
+function showMsg(t,c){var m=document.getElementById('form-msg');m.textContent=t;m.className=c;m.style.display='block';setTimeout(function(){m.style.display='none'},6000)}
+
+/* COOKIES */
+function acceptCookies(){localStorage.setItem('cookies_set','accepted');document.getElementById('cookie-bar').classList.add('hidden')}
+function declineCookies(){localStorage.setItem('cookies_set','declined');document.getElementById('cookie-bar').classList.add('hidden')}
+
+/* CHATBOT */
 function tc(){document.getElementById('cfab').classList.toggle('open');document.getElementById('cwi').classList.toggle('open')}
 function gt(){return new Date().toLocaleTimeString('en-IE',{hour:'2-digit',minute:'2-digit'})}
 function am(t,s){var b=document.getElementById('cb'),m=document.createElement('div');m.className='cm '+s;m.innerHTML=t+'<span class="mt">'+gt()+'</span>';b.appendChild(m);b.scrollTop=b.scrollHeight}
-function gr(t){var l=t.toLowerCase();for(var k in R)if(k!=='default'&&l.includes(k))return R[k];if(l.match(/accident|injured|claim|hurt/))return R['personal injury'];if(l.match(/house|buying|selling/))return R['property'];if(l.match(/book|appointment|schedule/))return R['consultation'];if(l.match(/work|dismissed/))return R['employment'];if(l.match(/divorce|custody/))return R['family'];if(l.match(/hello|hi |hey/))return"Hello! How can we help today?";if(l.match(/thank/))return"You are very welcome.";return R['default']}
-function sm(){var i=document.getElementById('ci'),t=i.value.trim();if(!t)return;document.getElementById('cq').style.display='none';am(t,'u');i.value='';var ty=document.getElementById('ct');ty.classList.add('on');document.getElementById('cb').scrollTop=9999;setTimeout(()=>{ty.classList.remove('on');am(gr(t),'b')},900+Math.random()*600)}
+function wb(w){return new RegExp('\\b'+w+'\\b','i')}
+function any(l,words){for(var i=0;i<words.length;i++){if(wb(words[i]).test(l))return true}return false}
+function gr(t){
+  var l=t.toLowerCase();
+
+  /* Greetings */
+  if(any(l,['hi','hello','hey','howya','hiya','good morning','good afternoon','good evening']))return"Hello! Welcome to Keans Solicitors. How can we help you today? You can ask about any of our practice areas, our offices, or booking a consultation.";
+
+  /* Thanks */
+  if(any(l,['thank','thanks','cheers','appreciate']))return"You are very welcome. Is there anything else we can help with?";
+
+  /* Goodbye */
+  if(any(l,['bye','goodbye','see you','that\'s all','no thanks']))return"Thank you for contacting Keans Solicitors. If you need anything else, do not hesitate to get in touch. Have a great day!";
+
+  /* Personal Injury */
+  if(any(l,['personal injury','injury claim','injured','accident','crash','collision','car accident','road traffic','rta','slip','trip','fall','slipped','tripped','medical negligence','malpractice','workplace injury','work accident','hurt at work','compensation']))return"We specialise in personal injury claims and offer a <strong>free initial consultation</strong>. We handle road traffic accidents, workplace injuries, slips and falls, and medical negligence. Call us on <a href='tel:016769955'>01 676 9955</a> or <a href='#' onclick=\"go('contact');tc();return false\">fill in our contact form</a>.";
+
+  /* PIAB */
+  if(any(l,['piab','injuries board','assessment']))return"PIAB (the Personal Injuries Assessment Board) assesses most personal injury claims before they can go to court. We guide you through the full PIAB process from application to assessment. <a href='/blog/personal-injury-claim-ireland.html'>Read our guide</a> or call <a href='tel:016769955'>01 676 9955</a>.";
+
+  /* Property */
+  if(any(l,['property','conveyancing','buying a house','selling a house','house','mortgage','lease','tenant','landlord','remortgage','title','boundary']))return"Our property team handles buying, selling, conveyancing, lease agreements, landlord/tenant disputes, and title issues. We keep you informed at every step. <a href='/blog/conveyancing-ireland.html'>Read our conveyancing guide</a> or <a href='#' onclick=\"go('contact');tc();return false\">get in touch</a>.";
+
+  /* Family */
+  if(any(l,['family','divorce','separation','custody','access','child','children','maintenance','domestic violence','barring order','safety order','prenup','prenuptial','guardianship','mediation']))return"We handle family law matters with sensitivity and discretion, including separation, divorce, custody, access, maintenance, domestic violence protection, and prenuptial agreements. All consultations are fully confidential. Call <a href='tel:016769955'>01 676 9955</a>.";
+
+  /* Employment */
+  if(any(l,['employment','unfair dismissal','dismissed','fired','sacked','redundancy','redundant','discrimination','harassment','bullying','wrc','workplace relations','labour court','contract','work rights']))return"Our employment team represents both employees and employers. We handle unfair dismissal, redundancy, workplace discrimination, harassment, and WRC/Labour Court proceedings. <a href='/blog/unfair-dismissal-ireland.html'>Read our guide</a> or call <a href='tel:016769955'>01 676 9955</a>.";
+
+  /* Wills & Probate */
+  if(any(l,['will','wills','probate','estate','inheritance','power of attorney','enduring power','executor','trust','bequest','intestacy','died','passed away','deceased']))return"We help with drafting wills, probate applications, estate administration, enduring powers of attorney, and inheritance disputes. Planning ahead protects your family. <a href='#' onclick=\"go('contact');tc();return false\">Book a consultation</a> or call <a href='tel:016769955'>01 676 9955</a>.";
+
+  /* Commercial */
+  if(any(l,['commercial','business','company','shareholder','partnership','debt','contract dispute','intellectual property','company formation','corporate','litigation']))return"We provide strategic legal counsel to businesses of all sizes, covering commercial disputes, company formation, shareholder issues, debt recovery, and regulatory compliance. <a href='#' onclick=\"go('contact');tc();return false\">Discuss your business matter</a>.";
+
+  /* Concierge */
+  if(any(l,['concierge','premium','priority','dedicated','vip']))return"Keans Concierge is our premium service offering priority access, same-day consultations, and a dedicated solicitor assigned to your matters. <a href='#' onclick=\"go('concierge');tc();return false\">Learn more about Concierge</a>.";
+
+  /* Consultation / Booking */
+  if(any(l,['book','appointment','consultation','schedule','meeting','come in','visit','available']))return"We offer consultations at both our offices. You can book by calling <a href='tel:016769955'>01 676 9955</a> (Dublin City) or <a href='tel:016100161'>01 610 0161</a> (Lucan), or <a href='#' onclick=\"go('contact');tc();return false\">send us a message</a> and we will get back to you promptly.";
+
+  /* Fees / Cost */
+  if(any(l,['cost','fee','fees','price','pricing','charge','how much','expensive','afford','payment','pay']))return"We are transparent about our fees and discuss costs upfront. Personal injury consultations are free. For other matters, fees depend on the complexity of your case. Call <a href='tel:016769955'>01 676 9955</a> to discuss.";
+
+  /* Location / Office */
+  if(any(l,['where','location','office','address','directions','find you','dublin 2','trinity street','lucan','griffeen']))return"We have two offices:<br><strong>Dublin City Centre:</strong> 4/5 Trinity Street, Dublin 2, D02 RH32<br><strong>Lucan:</strong> Unit 3 Griffeen Centre, Co. Dublin<br><br>Call Dublin on <a href='tel:016769955'>01 676 9955</a> or Lucan on <a href='tel:016100161'>01 610 0161</a>.";
+
+  /* Hours */
+  if(any(l,['hours','opening','open','close','when','time','monday','tuesday','wednesday','thursday','friday','weekend','saturday','sunday']))return"Our offices are open Monday to Friday, 9:00am to 5:30pm. For urgent matters outside these hours, call <a href='tel:016769955'>01 676 9955</a> and leave a message. We will return your call as soon as possible.";
+
+  /* Phone / Contact */
+  if(any(l,['phone','call','number','contact','email','reach','ring']))return"You can reach us at:<br><strong>Dublin:</strong> <a href='tel:016769955'>01 676 9955</a><br><strong>Lucan:</strong> <a href='tel:016100161'>01 610 0161</a><br>Or <a href='#' onclick=\"go('contact');tc();return false\">send us a message online</a>.";
+
+  /* Gerald Kean */
+  if(any(l,['gerald','kean','principal','founder','who runs']))return"Dr Gerald Kean is the Principal and Founder of the firm. He qualified as a solicitor in 1980 and established Keans Solicitors in 1988. His main area of focus is personal injury claims. <a href='#' onclick=\"go('about');tc();return false\">Read more about Dr Kean</a>.";
+
+  /* How long / experience */
+  if(any(l,['how long','established','experience','years','since','history','reputation']))return"Keans Solicitors was established in 1988, giving us over 35 years of experience serving clients across Dublin and Ireland. We are regulated by the Law Society of Ireland.";
+
+  /* Blog / Guides */
+  if(any(l,['blog','guide','article','read','learn','information','info']))return"We publish plain-English legal guides on Irish law. You can <a href='/blog'>browse all our guides here</a>, covering personal injury claims, conveyancing, unfair dismissal, and more.";
+
+  /* Catch-all */
+  return"Thank you for your message. For the best advice on your specific situation, we recommend speaking with one of our solicitors directly. Call <a href='tel:016769955'>01 676 9955</a> or <a href='#' onclick=\"go('contact');tc();return false\">send us a message</a> and we will be in touch promptly.";
+}
+function sm(){var i=document.getElementById('ci'),t=i.value.trim();if(!t)return;document.getElementById('cq').style.display='none';am(t,'u');i.value='';var ty=document.getElementById('ct');ty.classList.add('on');document.getElementById('cb').scrollTop=9999;setTimeout(function(){ty.classList.remove('on');am(gr(t),'b')},800+Math.random()*500)}
 function sq(t){document.getElementById('ci').value=t;sm()}
 </script>
 </body>
